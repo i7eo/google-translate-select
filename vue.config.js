@@ -1,4 +1,6 @@
 module.exports = {
+  publicPath:"./",
+  outputDir:"lib",
   css: { extract: false },
   chainWebpack: config => {
     config.module
