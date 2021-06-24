@@ -380,7 +380,7 @@ export default {
 
 ## 问题 & 建议
 
-来这一起玩耍 [here](https://github.com/eggjs/egg/issues).
+来这一起玩耍 [here](https://github.com/i7eo/v-google-translate/issues).
 
 ## :stuck_out_tongue_winking_eye: Authors
 

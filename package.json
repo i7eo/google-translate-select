@@ -1,7 +1,21 @@
 {
   "name": "v-google-translate",
   "version": "0.1.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i7eo/v-google-translate.git"
+  },
+  "keywords": [
+    "Vue2.x",
+    "Vue",
+    "google translate",
+    "google",
+    "translate",
+    "vue google translate"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name v-google-translate src/packages/index.js",
@@ -10,9 +24,6 @@
     "lint": "vue-cli-service lint"
   },
   "main": "./dist/v-google-translate.umd.min.js",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
@@ -42,5 +53,11 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "author": "i7eo <george704t@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "homepage": "https://github.com/i7eo/v-google-translate#readme"
 }

@@ -377,7 +377,7 @@ The `code`, `ename`, `name` must be uploaded, and the `cname` is the data we nee
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+Please open an issue [here](https://github.com/i7eo/v-google-translate/issues).
 
 ## :stuck_out_tongue_winking_eye: Authors
 
