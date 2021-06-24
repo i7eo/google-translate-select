@@ -30,7 +30,7 @@
     "coverage": "open ./coverage/lcov-report/index.html",
     "lint": "vue-cli-service lint"
   },
-  "main": "./dist/v-google-translate.umd.min.js",
+  "main": "./lib/v-google-translate.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
