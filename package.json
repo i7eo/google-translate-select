@@ -13,6 +13,10 @@
     "translate",
     "vue google translate"
   ],
+  "files": [
+    "lib",
+    "README.md"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
