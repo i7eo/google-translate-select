@@ -15,7 +15,10 @@
   ],
   "files": [
     "lib",
-    "README.md"
+    "public",
+    "src",
+    "README.md",
+    "README_zh.md"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
