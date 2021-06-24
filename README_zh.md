@@ -5,7 +5,7 @@
 [npm-image]: https://img.shields.io/npm/v/v-google-translate.svg
 [npm-url]: https://npmjs.org/package/v-google-translate
 
-包含谷歌翻译插件的 Vue 组件，支持 Vue@2.x。
+包含谷歌翻译插件的 Vue 组件，支持 Vue2.x。
 
 ## :large_blue_circle: Internationalization
 

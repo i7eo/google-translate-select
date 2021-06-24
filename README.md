@@ -5,7 +5,7 @@
 [npm-image]: https://img.shields.io/npm/v/v-google-translate.svg
 [npm-url]: https://npmjs.org/package/v-google-translate
 
-google translate for Vue@2.x.
+google translate for Vue2.x.
 
 ## :large_blue_circle: Internationalization
 
