@@ -60,7 +60,7 @@
 
 <script>
 export default {
-  name: "VGoogleTranslate",
+  name: "v-google-translate",
   props: {
     languages: {
       type: Array,
