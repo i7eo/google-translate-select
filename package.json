@@ -1,6 +1,6 @@
 {
   "name": "v-google-translate",
-  "version": "0.1.5",
+  "version": "0.1.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/i7eo/v-google-translate.git"
@@ -30,7 +30,7 @@
     "coverage": "open ./coverage/lcov-report/index.html",
     "lint": "vue-cli-service lint"
   },
-  "main": "./lib/v-google-translate.common.js",
+  "main": "./lib/v-google-translate.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"

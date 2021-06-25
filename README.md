@@ -32,7 +32,7 @@ For more details on what localization is and the potential benefits, [checkout t
 
 ### Demo
 
-To view the package in action, check it out [here.](https://codesandbox.io/s/wz1ln)
+To view the package in action, check it out [here.](https://codesandbox.io/s/v-google-translate-demo-er3z8)
 
 ### Installation
 
@@ -54,19 +54,18 @@ npm i v-google-translate
 > Use in Vue component
 
 ```javascript
-import { vGoogleTranslate } from 'v-google-translate';
+// main.js
+import vGoogleTranslate from 'v-google-translate';
+Vue.use(vGoogleTranslate)
+```
+
+```javascript
+// xxx.vue
 <template>
   <div>
   <v-google-translate />
   <div>
 </template>
-
-export default {
-  components: {
-    vGoogleTranslate
-  }
-}
-
 ```
 
 > Use in html
@@ -74,13 +73,14 @@ export default {
 ```html
 <body>
   <v-google-translate></v-google-translate>
+
+  <script src="https://cdn.jsdelivr.net/npm/v-google-translate/lib/v-google-translate.umd.min.js"></script>
 </body>
 ```
 
 If you want to do something after you select the language, add `@select` to the component, just like this:
 
 ```javascript
-import { vGoogleTranslate } from 'v-google-translate';
 <template>
   <div>
   <v-google-translate  @select="googleTranslateSelectedHandler"/>
@@ -88,9 +88,6 @@ import { vGoogleTranslate } from 'v-google-translate';
 </template>
 
 export default {
-  components: {
-    vGoogleTranslate
-  },
   methods: {
     googleTranslateSelectedHandler(language) {
       const { code, name, cname, ename } = language

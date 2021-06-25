@@ -30,7 +30,7 @@
 
 ### 例子
 
-要了解该组件的具体使用方法，请查看 [here.](https://codesandbox.io/s/wz1ln)
+要了解该组件的具体使用方法，请查看 [here.](https://codesandbox.io/s/v-google-translate-demo-er3z8)
 
 ### 安装
 
@@ -52,19 +52,18 @@ npm i v-google-translate
 > Use in Vue component
 
 ```javascript
-import { vGoogleTranslate } from 'v-google-translate';
+// main.js
+import vGoogleTranslate from 'v-google-translate';
+Vue.use(vGoogleTranslate)
+```
+
+```javascript
+// xxx.vue
 <template>
   <div>
   <v-google-translate />
   <div>
 </template>
-
-export default {
-  components: {
-    vGoogleTranslate
-  }
-}
-
 ```
 
 > Use in html
@@ -72,6 +71,8 @@ export default {
 ```html
 <body>
   <v-google-translate></v-google-translate>
+
+  <script src="https://cdn.jsdelivr.net/npm/v-google-translate/lib/v-google-translate.umd.min.js"></script>
 </body>
 ```
 
