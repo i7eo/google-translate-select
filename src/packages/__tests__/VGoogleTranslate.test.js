@@ -15,15 +15,15 @@ describe("VGoogleTranslate.vue", () => {
     languages = [
       {
         code: "en",
-        name: "English",
+        localeName: "English",
         cname: "英语",
-        ename: "English",
+        name: "English",
       },
       {
         code: "ar",
-        name: "العربية",
+        localeName: "العربية",
         cname: "阿拉伯语",
-        ename: "Arabic",
+        name: "Arabic",
       },
     ];
   });
