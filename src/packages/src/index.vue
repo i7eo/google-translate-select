@@ -342,7 +342,8 @@ export default {
     this.htmlLangObserver();
   },
   beforeDestroy() {
-    this._observer.disconnect();
+    this._googleTranslateSelectObserver.disconnect();
+    this._htmlLangObserver.disconnect();
   },
   methods: {
     initUtils() {
@@ -406,6 +407,7 @@ export default {
             });
           });
           Observer.observe && Observer.observe(target, optionsMap[optionName]);
+          return Observer;
         }
       };
     },
@@ -451,13 +453,17 @@ export default {
               var b = a;
               var t = document.querySelector(".goog-te-combo");
               var gtel = document.querySelector(".eo__languages");
-              if (gtel == null || gtel.innerHTML.length === 0 || t == null) {
-                setTimeout(() => {
-                  this.doGTranslate(a);
-                }, 500);
+              if (
+                gtel == null ||
+                gtel.innerHTML.length === 0 ||
+                t.options.length === 0
+              ) {
+                this.googleTranslateSelectObserver();
               } else {
                 t.value = b;
                 this.GTranslateFireEvent(t, "change");
+                this._googleTranslateSelectObserver &&
+                  this._googleTranslateSelectObserver.disconnect();
               }
             };
           },
@@ -468,8 +474,21 @@ export default {
       createJsonCallback();
       createScript();
     },
+    googleTranslateSelectObserver() {
+      this._googleTranslateSelectObserver = this.observer(
+        document.querySelector(".goog-te-combo"),
+        "child",
+        record => {
+          if (record.addedNodes[0] && record.addedNodes[0].value) {
+            if (this.selectedLanguageCode === record.addedNodes[0].value) {
+              this.doGTranslate(record.addedNodes[0].value);
+            }
+          }
+        },
+      );
+    },
     htmlLangObserver() {
-      this._observer = this.observer(
+      this._htmlLangObserver = this.observer(
         document.querySelector("html"),
         "attribute",
         record => {
