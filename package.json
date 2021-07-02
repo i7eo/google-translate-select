@@ -38,6 +38,7 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.4",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
@@ -47,15 +48,22 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^6.0.0",
     "codecov": "^3.8.2",
+    "commitlint": "^12.1.4",
     "cross-env": "^7.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": "^7.0.0",
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

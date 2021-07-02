@@ -7,10 +7,7 @@
 [![codecov](https://codecov.io/gh/i7eo/v-google-translate/branch/master/graph/badge.svg?token=4XX6XMBIZF)](https://codecov.io/gh/i7eo/v-google-translate)
 
 </div>
-
-## :large_blue_circle: Internationalization
-
-English | [中文文档](README_zh.md)
+<p align="center">English | <a href="README.zh-CN.md">中文</a></p>
 
 ## Table of Contents
 
