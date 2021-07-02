@@ -60,11 +60,6 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "gitHooks": {
     "pre-commit": "lint-staged",
     "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
