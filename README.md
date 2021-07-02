@@ -5,6 +5,10 @@
 [npm-image]: https://img.shields.io/npm/v/v-google-translate.svg
 [npm-url]: https://npmjs.org/package/v-google-translate
 
+[![travis-ci](https://travis-ci.com/i7eo/v-google-translate.svg?branch=master)](https://travis-ci.com/i7eo/v-google-translate)
+[![codecov](https://codecov.io/gh/i7eo/v-google-translate/branch/master/graph/badge.svg?token=4XX6XMBIZF)](https://codecov.io/gh/i7eo/v-google-translate)
+
+
 google translate for Vue2.x.
 
 ## :large_blue_circle: Internationalization
