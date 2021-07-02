@@ -1,11 +1,12 @@
-# v-google-translate
+<h1 align="center">v-google-translate</h1>
+<p align="center">包含谷歌翻译插件的 Vue 组件，支持 Vue2.x。</p>
+<div align="center">
 
-[![NPM version][npm-image]][npm-url]
+[![NPM version](https://img.shields.io/npm/v/v-google-translate.svg)](https://npmjs.org/package/v-google-translate)
+[![travis-ci](https://travis-ci.com/i7eo/v-google-translate.svg?branch=master)](https://travis-ci.com/i7eo/v-google-translate)
+[![codecov](https://codecov.io/gh/i7eo/v-google-translate/branch/master/graph/badge.svg?token=4XX6XMBIZF)](https://codecov.io/gh/i7eo/v-google-translate)
 
-[npm-image]: https://img.shields.io/npm/v/v-google-translate.svg
-[npm-url]: https://npmjs.org/package/v-google-translate
-
-包含谷歌翻译插件的 Vue 组件，支持 Vue2.x。
+</div>
 
 ## :large_blue_circle: Internationalization
 
