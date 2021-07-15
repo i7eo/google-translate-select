@@ -512,9 +512,9 @@ export default {
       const browserLanguage = this.fetchBrowserLanguage
         ? this.isLanguageCodeInLanguages(this.getBrowserLanguage())
         : "";
-      // const googleCookieLanguage = this.getGoogleCookieLanguage();
+      const googleCookieLanguage = this.getGoogleCookieLanguage();
       const isBrowserLanguageNotEmpty = this.fetchBrowserLanguage;
-      // const isGoogleCookieLanguageNotEmpty = !!googleCookieLanguage;
+      const isGoogleCookieLanguageNotEmpty = !!googleCookieLanguage;
       const isBrowserLanguageInLanguages = !!this.languages.find(
         language => language.code === browserLanguage,
       );
@@ -528,15 +528,21 @@ export default {
         }
       };
 
-      // 判断是否开启读取浏览器语言
-      if (!isBrowserLanguageNotEmpty) {
-        selectedCode = handleDefaultLanguage();
-      } else {
-        if (isBrowserLanguageInLanguages) {
-          selectedCode = browserLanguage;
-        } else {
+      // 首次进入 google translate 不会植入 cookie
+      if (!isGoogleCookieLanguageNotEmpty) {
+        // 判断是否开启读取浏览器语言
+        if (!isBrowserLanguageNotEmpty) {
           selectedCode = handleDefaultLanguage();
+        } else {
+          if (isBrowserLanguageInLanguages) {
+            selectedCode = browserLanguage;
+          } else {
+            selectedCode = handleDefaultLanguage();
+          }
         }
+      } else {
+        // 只要有 GoogleCookie：googtrans 就取 cookie 的值 (isGoogleCookieLanguageNotEmpty && isBrowserLanguageNotEmpty) || (isGoogleCookieLanguageNotEmpty && !isBrowserLanguageNotEmpty)
+        selectedCode = googleCookieLanguage;
       }
 
       this.translateHandler(selectedCode);
