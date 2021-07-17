@@ -513,12 +513,8 @@ export default {
         ? this.isLanguageCodeInLanguages(this.getBrowserLanguage())
         : "";
       const googleCookieLanguage = this.getGoogleCookieLanguage();
-      const isBrowserLanguageNotEmpty = this.fetchBrowserLanguage;
-      const isGoogleCookieLanguageNotEmpty = !!googleCookieLanguage;
-      const isBrowserLanguageInLanguages = !!this.languages.find(
-        language => language.code === browserLanguage,
-      );
-      let selectedCode = "";
+      const isFetchBrowserLanguageOpen = this.fetchBrowserLanguage;
+      const isGoogleCookieLanguageExist = !!googleCookieLanguage;
 
       const handleDefaultLanguage = () => {
         if (this.defaultLanguageCode) {
@@ -528,21 +524,37 @@ export default {
         }
       };
 
-      // 首次进入 google translate 不会植入 cookie
-      if (!isGoogleCookieLanguageNotEmpty) {
-        // 判断是否开启读取浏览器语言
-        if (!isBrowserLanguageNotEmpty) {
-          selectedCode = handleDefaultLanguage();
+      const handleBrowserLanguageInLanguages = () => {
+        const isBrowserLanguageInLanguages = !!this.languages.find(
+          language => language.code === browserLanguage,
+        );
+        if (isBrowserLanguageInLanguages) {
+          return browserLanguage;
         } else {
-          if (isBrowserLanguageInLanguages) {
-            selectedCode = browserLanguage;
-          } else {
-            selectedCode = handleDefaultLanguage();
-          }
+          return handleDefaultLanguage();
         }
+      };
+
+      const handleGoogleCookieLanguageInLanguages = () => {
+        const isGoogleCookieLanguageInLanguages = !!this.languages.find(
+          language => language.code === googleCookieLanguage,
+        );
+        if (isGoogleCookieLanguageInLanguages) {
+          return googleCookieLanguage;
+        } else {
+          return handleDefaultLanguage();
+        }
+      };
+
+      let selectedCode = handleDefaultLanguage();
+      if (!isGoogleCookieLanguageExist) {
+        // 首次
+        if (isFetchBrowserLanguageOpen)
+          selectedCode = handleBrowserLanguageInLanguages();
       } else {
-        // 只要有 GoogleCookie：googtrans 就取 cookie 的值 (isGoogleCookieLanguageNotEmpty && isBrowserLanguageNotEmpty) || (isGoogleCookieLanguageNotEmpty && !isBrowserLanguageNotEmpty)
-        selectedCode = googleCookieLanguage;
+        // 非首次
+        // 越过浏览器语言判断直接去列表中匹配
+        selectedCode = handleGoogleCookieLanguageInLanguages();
       }
 
       this.translateHandler(selectedCode);
