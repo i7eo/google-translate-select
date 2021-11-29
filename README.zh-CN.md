@@ -11,18 +11,18 @@
 
 ## Table of Contents
 
- 1. [问题](#问题)
- 2. [例子](#例子)
- 3. [安装](#安装)
- 4. [使用](#使用)
+1.  [问题](#问题)
+2.  [例子](#例子)
+3.  [安装](#安装)
+4.  [使用](#使用)
     - [Props](#props)
- 5. [提示](#提示)
+5.  [提示](#提示)
 
 ### 问题
 
 这个组件的灵感很大程度上来自 [vue-google-translate](https://github.com/lewis-kori/vue-google-translate)。
 
-这个包支持使用谷歌翻译vue制作的web应用的本地化。随着你的网站和应用的发展，你可能会发现需要扩展到本国以外的其他市场。
+这个包支持使用谷歌翻译 vue 制作的 web 应用的本地化。随着你的网站和应用的发展，你可能会发现需要扩展到本国以外的其他市场。
 
 有关本地化的更多信息和潜在好处，请查看本文， [checkout this article](https://alistapart.com/article/do-you-need-to-localize-your-website/)。
 
@@ -51,8 +51,8 @@ npm i v-google-translate
 
 ```javascript
 // main.js
-import vGoogleTranslate from 'v-google-translate';
-Vue.use(vGoogleTranslate)
+import vGoogleTranslate from "v-google-translate";
+Vue.use(vGoogleTranslate);
 ```
 
 ```javascript
@@ -343,7 +343,7 @@ export default {
     cname: "乌克兰语",
     ename: "Ukrainian",
   },
-]
+];
 ```
 
 上述数据是我根据 wiki 以及 shopify 整理的全部语种信息，这些数据已经在我们上线的项目中使用。
@@ -354,7 +354,7 @@ export default {
 
 > prop name: defaultLanguageCode, type: String, default: 'en'
 
-默认语言code
+默认语言 code
 
 > prop name: fetchBrowserLanguage, type: Boolean, default: true
 
@@ -364,15 +364,26 @@ export default {
 
 移入/移出的动画延时
 
+> prop name: dropdownClassName, type: String, default: ''
+
+下拉菜单的 className 属性
+
+> prop name: dropdownStyle, type: Object, default: {}
+
+下拉菜单的 style 属性
+
+> prop name: showArrow, type: Boolean, default: true
+
+是否显示下拉小箭头
+
 ### 提示
 
 - 我们使用的是`translate.google.com/translate_a/element.js`这个库，它对于网站上的文字进行全量翻译。
 
 - **对于那些你不想翻译的内容，请添加 `class= "notranslate"`**
 
-- 一个例子:我们正在做一个跨境电子商务项目。在这个项目中，我们需要多语言、多货币两个功能来完成国际化。对于页面上的价格，我们不希望被翻译成多种语言。因此，我们在价格DOM中添加了 ` class= "notranslate" `，以便在货币变化时动态修改价格DOM信息。
+- 一个例子:我们正在做一个跨境电子商务项目。在这个项目中，我们需要多语言、多货币两个功能来完成国际化。对于页面上的价格，我们不希望被翻译成多种语言。因此，我们在价格 DOM 中添加了 `class= "notranslate"`，以便在货币变化时动态修改价格 DOM 信息。
 - 最好能自定义一个监听当前页面全部组件加载完成的钩子函数，多语言组件监听这个钩子函数，当函数返回时再调用该组件。可能会出现的情况是部分动态生成的文字翻译不全
-
 
 ## :copyright: License
 
@@ -385,4 +396,3 @@ export default {
 ## :stuck_out_tongue_winking_eye: Authors
 
 [i7eo](https://i7eo.com/about/)
-

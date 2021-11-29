@@ -19,6 +19,7 @@
         <svg
           class="icon-svg icon-svg--size16"
           :style="{ transform: visible ? 'rotate(0deg)' : 'rotate(180deg)' }"
+          v-if="showArrow"
         >
           <svg xmlns="http://www.w3.org/2000/svg">
             <path
@@ -29,7 +30,8 @@
       </div>
       <transition name="v-animate-zoom-in-top">
         <div
-          class="eo__dropdown__menu"
+          :class="[dropdownClassName, 'eo__dropdown__menu']"
+          :style="dropdownStyle"
           v-show="visible"
           @mouseenter="show"
           @mouseleave="hide"
@@ -322,6 +324,20 @@ export default {
     animateTimeout: {
       type: Number,
       default: 150,
+    },
+    dropdownClassName: {
+      type: String,
+      default: "",
+    },
+    dropdownStyle: {
+      type: Object,
+      default: () => {
+        return {};
+      },
+    },
+    showArrow: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {
