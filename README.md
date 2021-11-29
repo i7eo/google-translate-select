@@ -11,20 +11,21 @@
 
 ## Table of Contents
 
- 1. [Problem](#problem)
- 2. [Demo](#demo)
- 3. [Installation](#installation)
- 4. [Usage](#usage)
+1.  [Problem](#problem)
+2.  [Demo](#demo)
+3.  [Installation](#installation)
+4.  [Usage](#usage)
     - [Props](#props)
- 5. [Tips](#tips)
+5.  [Tips](#tips)
 
 ### Problem
+
 This package was heavily inspired by [vue-google-translate](https://github.com/lewis-kori/vue-google-translate).
 
 This package enables localization of web apps made with vue by use of google translate.
 As your website and app grows, you may find a need to expand to other markets outside your home country.
 
-If your target market lives across the sea and speaks a different language, you may not have any choice but to localize. 
+If your target market lives across the sea and speaks a different language, you may not have any choice but to localize.
 
 For more details on what localization is and the potential benefits, [checkout this article](https://alistapart.com/article/do-you-need-to-localize-your-website/).
 
@@ -53,8 +54,8 @@ npm i v-google-translate
 
 ```javascript
 // main.js
-import vGoogleTranslate from 'v-google-translate';
-Vue.use(vGoogleTranslate)
+import vGoogleTranslate from "v-google-translate";
+Vue.use(vGoogleTranslate);
 ```
 
 ```javascript
@@ -98,7 +99,6 @@ export default {
 #### props
 
 > prop name: languages, type: Array, default: (As shown below.)
-
 
 ```javascript
 [
@@ -342,8 +342,9 @@ export default {
     cname: "乌克兰语",
     ename: "Ukrainian",
   },
-]
+];
 ```
+
 The above is all the language information from the WIKI, The data we are using.
 
 The `code`, `ename`, `name` must be uploaded, and the `cname` is the data we need to use.
@@ -356,6 +357,11 @@ The `code`, `ename`, `name` must be uploaded, and the `cname` is the data we nee
 
 > prop name: animateTimeout, type: Number, default: 150
 
+> prop name: dropdownClassName, type: String, default: ''
+
+> prop name: dropdownStyle, type: Object, default: {}
+
+> prop name: showArrow, type: Boolean, default: true
 
 ### Tips
 
@@ -364,7 +370,6 @@ The `code`, `ename`, `name` must be uploaded, and the `cname` is the data we nee
 - **For something you don't want to translate, add `class= "notranslate"`**
 
 - I can give you an example of best practices: We are working on a cross-border e-commerce project. In this project, we need two functions, multi-language and multi-currency, to complete internationalization. For the price on the page, we don't want to be translated into multiple languages. So we added `class= "notranslate"` to the price DOM to dynamically modify the price DOM information when the currency changes.
-
 
 ## :copyright: License
 
@@ -377,4 +382,3 @@ Please open an issue [here](https://github.com/i7eo/v-google-translate/issues).
 ## :stuck_out_tongue_winking_eye: Authors
 
 [i7eo](https://i7eo.com/about/)
-
