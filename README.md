@@ -353,6 +353,8 @@ The `code`, `ename`, `name` must be uploaded, and the `cname` is the data we nee
 
 > prop name: defaultLanguageCode, type: String, default: 'en'
 
+> prop name: defaultPageLanguageCode, type: String, default: 'en'
+
 > prop name: fetchBrowserLanguage, type: Boolean, default: true
 
 > prop name: animateTimeout, type: Number, default: 150
@@ -370,6 +372,8 @@ The `code`, `ename`, `name` must be uploaded, and the `cname` is the data we nee
 - **For something you don't want to translate, add `class= "notranslate"`**
 
 - I can give you an example of best practices: We are working on a cross-border e-commerce project. In this project, we need two functions, multi-language and multi-currency, to complete internationalization. For the price on the page, we don't want to be translated into multiple languages. So we added `class= "notranslate"` to the price DOM to dynamically modify the price DOM information when the currency changes.
+
+- **Google Translate JS SDK default your page source language is English (code is `en`), if your page source language is non-English language, please set `defaultPageLanguageCode` manually. For example: `defaultPageLanguageCode = "zh-CN"`**
 
 ## :copyright: License
 

@@ -356,6 +356,10 @@ export default {
 
 默认语言 code
 
+> prop name: defaultPageLanguageCode, type: String, default: 'en'
+
+默认页面源语言 code
+
 > prop name: fetchBrowserLanguage, type: Boolean, default: true
 
 是否根据浏览器语言自动修改当前站点语言

@@ -317,6 +317,10 @@ export default {
       type: String,
       default: "en",
     },
+    defaultPageLanguageCode: {
+      type: String,
+      default: "en",
+    },
     fetchBrowserLanguage: {
       type: Boolean,
       default: true,
@@ -437,7 +441,7 @@ export default {
       const createJsonCallback = () => {
         window.googleTranslateElementInit = function () {
           new window.google.translate.TranslateElement(
-            { pageLanguage: "en", autoDisplay: false },
+            { pageLanguage: _this.defaultPageLanguageCode, autoDisplay: false },
             "google_translate_element",
           );
           _this.setSelectedLanguageCode();
@@ -445,7 +449,7 @@ export default {
       };
       const createScript = () => {
         this.dynamicLoadJs(
-          "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit",
+          "//translate.google.cn/translate_a/element.js?cb=googleTranslateElementInit",
           () => {
             this.GTranslateFireEvent = (a, b) => {
               try {
