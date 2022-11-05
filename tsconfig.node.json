@@ -1,0 +1,8 @@
+{
+  "extends": "@google-translate-select/ts-config/node.module.json",
+  "include": ["**/build.config.ts", "**/scripts/**/*", "scripts/**/*"],
+  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"],
+  "compilerOptions": {
+    "composite": true
+  }
+}

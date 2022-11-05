@@ -1,0 +1,51 @@
+{
+  "name": "@google-translate-select/commitlint-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "🚀 The package offer commitlint for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "commitlint",
+    "commitlint-config"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/commitlint-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "internals/commitlint-config"
+  },
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "dependencies": {
+    "@commitlint/cli": "17.2.0",
+    "@commitlint/config-conventional": "17.2.0",
+    "czg": "^1.3.12"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

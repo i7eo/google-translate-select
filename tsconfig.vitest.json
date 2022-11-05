@@ -1,0 +1,12 @@
+{
+  "extends": "@google-translate-select/ts-config/vitest.json",
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/package.json",
+    "packages/**/__tests__/**/*",
+    "packages/**/tests/**/*"
+  ],
+  "compilerOptions": {
+    "composite": true
+  }
+}

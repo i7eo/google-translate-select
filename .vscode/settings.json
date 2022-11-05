@@ -1,0 +1,158 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "javascript.suggestionActions.enabled": false,
+  "npm.packageManager": "pnpm",
+  "editor.fontSize": 14,
+  "editor.lineNumbers": "on",
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.snippetSuggestions": "top",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": false,
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "editor.minimap.enabled": false,
+  "editor.largeFileOptimizations": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  // "stylelint.packageManager": "pnpm",
+  "stylelint.validate": ["css", "less", "scss"],
+
+  "files.autoSave": "afterDelay", // 自动保存
+  "files.eol": "\n",
+  // 在使用搜索功能时，将这些文件夹/文件排除在外
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/elehukouben": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "**/.idea": true,
+    "**/.vscode": false,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true,
+    "**/tmp": true,
+    "out": true,
+    "dist": true,
+    "node_modules": true,
+    "CHANGELOG.md": true,
+    "examples": true,
+    "res": true,
+    "screenshots": true,
+    "yarn-error.log": true,
+    "**/.yarn": true
+  },
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.editorconfig": true,
+    "**/.eslintignore": true,
+    "**/.prettierignore": true,
+    "**/.stylelintignore": true,
+    "**/LICENSE": true,
+    "**/.eslintcache": true,
+    "**/bower_components": true,
+    "**/.idea": true,
+    "**/tmp": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.meta": true,
+    "**/*.*.meta": true,
+    "**/*.unity": true,
+    "**/*.unityproj": true,
+    "**/*.mat": true,
+    "**/*.fbx": true,
+    "**/*.FBX": true,
+    "**/*.tga": true,
+    "**/*.cubemap": true,
+    "**/*.prefab": true,
+    "**/Library": true,
+    "**/ProjectSettings": true,
+    "**/Temp": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.vscode/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

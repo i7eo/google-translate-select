@@ -1,0 +1,49 @@
+{
+  "name": "@google-translate-select/ts-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "🚀 The package offer tsconfig for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "typescript",
+    "ts-config"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/ts-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "files": [
+    "base.json",
+    "docs.json",
+    "node.common.json",
+    "node.module.json",
+    "vite.json",
+    "vitest.json",
+    "web.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "internals/ts-config"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
