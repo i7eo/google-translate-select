@@ -16,6 +16,9 @@
     "noUnusedParameters": true,
 
     "outDir": "dist",
-    "baseUrl": "../../.."
+    "baseUrl": "../..",
+    "paths": {
+      "@google-translate-select/*": ["packages/*/src"]
+    }
   }
 }
