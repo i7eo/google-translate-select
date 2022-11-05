@@ -1,0 +1,55 @@
+{
+  "name": "@google-translate-select/vue2",
+  "version": "0.0.0",
+  "description": "🚀 The package offer vue2 library for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/packages/vue2#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "packages/vue2"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsup ./src/index.ts --format esm,cjs --dts",
+    "lint": "run-s lint:**",
+    "lint:eslint": "TIMING=1 eslint \"*.{js,jsx,ts,tsx,md,json}\" --fix",
+    "lint:prettier": "prettier --write \"*.{js,ts,jsx,tsx,md,json}\"",
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

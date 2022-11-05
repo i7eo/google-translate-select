@@ -1,79 +1,92 @@
 {
-  "name": "v-google-translate",
-  "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/i7eo/v-google-translate.git"
-  },
+  "name": "google-translate-select-monorepo",
+  "private": true,
+  "packageManager": "pnpm@7.14.2",
+  "description": "🚀 A modern, high-performance monorepo project designed with Google Translate JS SDK. Vue and react are supported!",
   "keywords": [
-    "Vue2.x",
-    "Vue",
+    "google translate select",
     "google translate",
     "google",
     "translate",
-    "vue google translate"
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "vitest"
   ],
-  "files": [
-    "lib",
-    "public",
-    "src",
-    "README.md",
-    "README_zh.md"
-  ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name v-google-translate src/packages/index.js",
-    "test:unit": "cross-env BABEL_ENV=test vue-cli-service test:unit --coverage",
-    "codecov": "codecov",
-    "test": "yarn test:unit && yarn codecov",
-    "coverage": "open ./coverage/lcov-report/index.html",
-    "lint": "vue-cli-service lint"
-  },
-  "main": "./lib/v-google-translate.umd.min.js",
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@commitlint/config-conventional": "^12.1.4",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/test-utils": "^1.0.3",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-istanbul": "^6.0.0",
-    "codecov": "^3.8.2",
-    "commitlint": "^12.1.4",
-    "cross-env": "^7.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "husky": "^7.0.0",
-    "lint-staged": "^9.5.0",
-    "prettier": "^2.2.1",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged",
-    "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-  },
-  "lint-staged": {
-    "src/**/**/**/*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  },
-  "author": "i7eo <george704t@gmail.com>",
-  "license": "ISC",
+  "homepage": "https://github.com/i7eo/v-google-translate#readme",
   "bugs": {
     "url": "https://github.com/i7eo/v-google-translate/issues"
   },
-  "homepage": "https://github.com/i7eo/v-google-translate#readme"
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git"
+  },
+  "scripts": {
+    "preinstall": "node ./scripts/preinstall.mjs",
+    "postinstall": "simple-git-hooks",
+    "dev": "turbo run dev --parallel --continue",
+    "test": "vitest",
+    "build": "turbo run build",
+    "clean": "run-s clean:**",
+    "clean:workspace": "turbo run clean",
+    "clean:cache": "turbo run clean:cache",
+    "clean:root-cache": "rimraf .turbo && rimraf pnpm-lock.yaml && rimraf node_modules",
+    "lint": "turbo run lint",
+    "format": "turbo run lint:prettier",
+    "commit": "czg",
+    "prerelease": "tsx ./scripts/prerelease.ts",
+    "changelog:gen": "tsx ./scripts/changesets/generate.ts",
+    "changelog:write": "tsx ./scripts/changesets/write.ts",
+    "changeset:publish": "tsx ./scripts/changesets/releases.ts",
+    "changeset:gen": "changeset"
+  },
+  "devDependencies": {
+    "@changesets/assemble-release-plan": "5.2.2",
+    "@changesets/changelog-github": "0.4.7",
+    "@changesets/cli": "^2.25.2",
+    "@changesets/config": "2.2.0",
+    "@changesets/pre": "1.0.13",
+    "@changesets/read": "0.5.8",
+    "@changesets/types": "5.2.0",
+    "@google-translate-select/commitlint-config": "workspace:*",
+    "@google-translate-select/constants": "workspace:*",
+    "@google-translate-select/eslint-config": "workspace:*",
+    "@google-translate-select/lint-staged-config": "workspace:*",
+    "@google-translate-select/prettier-config": "workspace:*",
+    "@google-translate-select/simple-git-hooks-config": "workspace:*",
+    "@google-translate-select/stylelint-config": "workspace:*",
+    "@google-translate-select/ts-config": "workspace:*",
+    "@manypkg/get-packages": "1.1.3",
+    "@types/inquirer": "9.0.2",
+    "@types/jsdom": "20.0.0",
+    "@types/node": "*",
+    "@types/prettier": "2.7.1",
+    "@types/semver": "7.3.13",
+    "@vitest/ui": "^0.24.5",
+    "inquirer": "^9.1.4",
+    "jsdom": "^20.0.2",
+    "npm-run-all": "^4.1.5",
+    "octokit": "^2.0.10",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.8",
+    "tsup": "^6.4.0",
+    "tsx": "^3.11.0",
+    "turbo": "^1.6.3",
+    "typescript": "^4.8.4",
+    "vitest": "^0.24.5"
+  },
+  "engines": {
+    "node": ">=16"
+  }
 }

@@ -1,0 +1,49 @@
+{
+  "name": "@google-translate-select/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "🚀 The package offer prettier for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "prettier",
+    "prettier-config"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/prettier-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "internals/prettier-config"
+  },
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "dependencies": {
+    "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
