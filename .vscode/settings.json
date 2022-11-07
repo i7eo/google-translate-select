@@ -47,7 +47,7 @@
   "scss.validate": false,
   "stylelint.enable": true,
   // "stylelint.packageManager": "pnpm",
-  "stylelint.validate": ["css", "less", "scss"],
+  "stylelint.validate": ["css", "less", "scss", "sass", "postcss", "vue"],
 
   "files.autoSave": "afterDelay", // 自动保存
   "files.eol": "\n",

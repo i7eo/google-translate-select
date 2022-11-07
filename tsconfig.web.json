@@ -1,6 +1,6 @@
 {
   "extends": "@google-translate-select/ts-config/web.json",
-  "include": ["packages/*/src/**/*", "packages/*/package.json"],
+  "include": ["packages/*/src/**/*", "packages/*/package.json", "typings/*"],
   "exclude": ["**/__tests__/**", "**/tests/**"],
   "compilerOptions": {
     "composite": true

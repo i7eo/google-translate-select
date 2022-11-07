@@ -1,0 +1,77 @@
+@use 'sass:map';
+
+// Typography
+$font-family: () !default;
+$font-family: map.merge(
+  (
+    '':
+      "'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif",
+  ),
+  $font-family
+);
+
+$font-size: () !default;
+$font-size: map.merge(
+  (
+    'extra-large': 20px,
+    'large': 18px,
+    'medium': 16px,
+    'base': 14px,
+    'small': 13px,
+    'extra-small': 12px,
+  ),
+  $font-size
+);
+
+// zIndex
+$z-index: () !default;
+$z-index: map.merge(
+  (
+    'normal': 1,
+    'top': 1000,
+    'popper': 2000,
+  ),
+  $z-index
+);
+
+// Disable default
+$disabled: () !default;
+$disabled: map.merge(
+  (
+    'bg-color': getcssvar('fill-color', 'light'),
+    'text-color': getcssvar('text-color', 'placeholder'),
+    'border-color': getcssvar('border-color', 'light'),
+  ),
+  $disabled
+);
+
+$common-component-size: () !default;
+$common-component-size: map.merge(
+  (
+    'large': 40px,
+    'default': 32px,
+    'small': 24px,
+  ),
+  $common-component-size
+);
+
+// overlay
+$overlay-color: () !default;
+$overlay-color: map.merge(
+  (
+    '': rgb(0 0 0 / 80%),
+    'light': rgb(0 0 0 / 70%),
+    'lighter': rgb(0 0 0 / 50%),
+  ),
+  $overlay-color
+);
+
+// mask
+$mask-color: () !default;
+$mask-color: map.merge(
+  (
+    '': rgb(255 255 255 / 90%),
+    'extra-light': rgb(255 255 255 / 30%),
+  ),
+  $mask-color
+);

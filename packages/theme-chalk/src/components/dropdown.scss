@@ -1,0 +1,13 @@
+@use '../mixins/bem.scss' as ns;
+
+@include ns.b(dropdown) {
+  @include ns.e(activator) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  position: relative;
+  cursor: pointer;
+}

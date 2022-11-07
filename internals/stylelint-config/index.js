@@ -28,14 +28,19 @@ module.exports = {
           'screen',
           'function',
           'if',
+          'else',
           'each',
           'include',
           'mixin',
+          // scss
+          'at-root',
+          'use',
+          'forward',
+          'return',
         ],
       },
     ],
     'no-empty-source': null,
-    // 'no-extra-semicolons': null,
     'string-quotes': null,
     'named-grid-areas-no-invalid': null,
     'unicode-bom': 'never',
@@ -450,8 +455,14 @@ module.exports = {
         ],
       },
     ],
+
+    // scss
+    'scss/operator-no-newline-after': null,
+    'block-closing-brace-newline-after': null,
+    'at-rule-empty-line-before': null,
+    'function-name-case': null,
   },
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
+  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.json'],
   overrides: [
     {
       files: ['*.vue', '**/*.vue', '*.html', '**/*.html'],
@@ -477,7 +488,8 @@ module.exports = {
       customSyntax: 'postcss-scss',
       extends: [
         'stylelint-config-standard',
-        'stylelint-config-recommended-vue',
+        'stylelint-config-recommended-scss',
+        'stylelint-config-recommended-vue/scss',
       ],
     },
   ],
