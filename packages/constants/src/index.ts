@@ -1,3 +1,5 @@
+export * from './component'
+export * from './languages'
 export * from './pkg'
 export * from './repo'
 export * from './ui'

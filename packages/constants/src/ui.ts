@@ -1,3 +1,2 @@
 export const COMPONENT_PREFIX = 'eo'
 export const COMPONENT_PREFIX_CAMELCASE_NAME = 'Eo'
-export const UI_NAME = `${COMPONENT_PREFIX_CAMELCASE_NAME}UI`

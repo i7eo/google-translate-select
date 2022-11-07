@@ -1,0 +1,39 @@
+@mixin utils-clearfix {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::before,
+    #{$selector}::after {
+      display: table;
+      content: '';
+    }
+    #{$selector}::after {
+      clear: both;
+    }
+  }
+}
+
+@mixin utils-vertical-center {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::after {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      content: '';
+    }
+  }
+}
+
+@mixin utils-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin utils-inline-flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

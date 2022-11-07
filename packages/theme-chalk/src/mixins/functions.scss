@@ -1,0 +1,88 @@
+@use 'sass:string';
+@use 'sass:meta';
+@forward '../constants/ui.scss';
+
+// BEM support Func
+@function selectorToString($selector) {
+  $selector: meta.inspect($selector);
+  $selector: string.slice($selector, 2, -2);
+  @return $selector;
+}
+
+@function containsModifier($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, $modifier-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function containWhenFlag($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, '.' + $state-prefix) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function containPseudoClass($selector) {
+  $selector: selectorToString($selector);
+
+  @if str-index($selector, ':') {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function hitAllSpecialNestRule($selector) {
+  @return containsModifier($selector) or containWhenFlag($selector) or
+    containPseudoClass($selector);
+}
+
+// join var name
+// joinVarName(('button', 'text-color')) => '--eo-button-text-color'
+@function joinVarName($list) {
+  $name: '--' + $namespace;
+  @each $item in $list {
+    @if $item != '' {
+      $name: $name + '-' + $item;
+    }
+  }
+  @return $name;
+}
+
+// getCssVarName('button', 'text-color') => '--eo-button-text-color'
+@function getCssVarName($args...) {
+  @return joinVarName($args);
+}
+
+// getCssVar('button', 'text-color') => var(--eo-button-text-color)
+@function getCssVar($args...) {
+  @return var(#{joinVarName($args)});
+}
+
+// getCssVarWithDefault(('button', 'text-color'), red) => var(--eo-button-text-color, red)
+@function getCssVarWithDefault($args, $default) {
+  @return var(#{joinVarName($args)}, #{$default});
+}
+
+// bem('block', 'element', 'modifier') => 'eo-block__element--modifier'
+@function bem($block, $element: '', $modifier: '') {
+  $name: $namespace + $common-separator + $block;
+
+  @if $element != '' {
+    $name: $name + $element-separator + $element;
+  }
+
+  @if $modifier != '' {
+    $name: $name + $modifier-separator + $modifier;
+  }
+
+  // @debug $name;
+  @return $name;
+}

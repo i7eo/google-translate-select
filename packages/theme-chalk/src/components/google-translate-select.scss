@@ -1,0 +1,11 @@
+@use '../mixins/bem.scss' as ns;
+
+@include ns.b('google-translate-select') {
+  @include ns.e(option) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  cursor: pointer;
+}
