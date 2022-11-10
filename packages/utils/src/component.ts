@@ -43,12 +43,16 @@ export function createGoogleTranslateJsonpCallback(
     }
   }
 
-  window[`googleTranslateElementInit`] = googleTranslateElementInit
+  window['googleTranslateElementInit'] = googleTranslateElementInit
 
   return {
     jsonpCallbackName: 'googleTranslateElementInit',
   }
 }
+
+export type CreateGoogleTranslateJsonpCallbackReturn = ReturnType<
+  typeof createGoogleTranslateJsonpCallback
+>
 
 export function GoogleTranslateFireEvent(
   GOOGLE_TRANSLATE_ORIGINAL_SELECT_DOM: HTMLElement,

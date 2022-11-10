@@ -69,11 +69,11 @@
     "@google-translate-select/ts-config": "workspace:*",
     "@manypkg/get-packages": "1.1.3",
     "@types/inquirer": "9.0.2",
-    "@types/jsdom": "20.0.0",
+    "@types/jsdom": "20.0.1",
     "@types/node": "*",
     "@types/prettier": "2.7.1",
     "@types/semver": "7.3.13",
-    "@vitest/ui": "^0.24.5",
+    "@vitest/ui": "^0.25.1",
     "inquirer": "^9.1.4",
     "jsdom": "^20.0.2",
     "npm-run-all": "^4.1.5",
@@ -84,7 +84,7 @@
     "tsx": "^3.11.0",
     "turbo": "^1.6.3",
     "typescript": "^4.8.4",
-    "vitest": "^0.24.5"
+    "vitest": "^0.25.1"
   },
   "engines": {
     "node": ">=16"
