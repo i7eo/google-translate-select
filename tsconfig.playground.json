@@ -1,13 +1,13 @@
 {
   "extends": "@google-translate-select/ts-config/web.json",
+  "compilerOptions": {
+    "composite": true
+  },
   "include": [
     "packages/*/src/**/*",
     "packages/*/package.json",
     "apps/playground/main.ts",
     "apps/playground/env.d.ts",
     "apps/playground/src/**/*"
-  ],
-  "compilerOptions": {
-    "composite": true
-  }
+  ]
 }

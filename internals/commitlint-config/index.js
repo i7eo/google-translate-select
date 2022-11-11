@@ -1,10 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 
-const internal = fs.readdirSync(path.resolve(__dirname, '../'))
+const internals = fs.readdirSync(path.resolve(__dirname, '../'))
 const packages = fs.readdirSync(path.resolve(__dirname, '../../packages/'))
 const apps = fs.readdirSync(path.resolve(__dirname, '../../apps'))
-const scopes = [...internal, ...apps, ...packages]
+const scopes = [...internals, ...apps, ...packages]
 
 module.exports = {
   extends: ['@commitlint/config-conventional'],

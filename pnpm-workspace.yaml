@@ -1,4 +1,7 @@
 packages:
-  - apps/**
-  - internals/**
-  - packages/**
+  - apps/docs
+  - apps/playground/vue2
+  - apps/playground/vue3
+  - apps/playground/react
+  - internals/*
+  - packages/*

@@ -1,5 +1,2 @@
-export * from './component'
-export * from './languages'
-export * from './pkg'
-export * from './repo'
-export * from './ui'
+export * from './node'
+export * from './web'
