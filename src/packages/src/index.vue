@@ -1,11 +1,7 @@
 <template>
   <div v-if="languages.length > 0" class="eo__languages notranslate">
     <div class="eo__dropdown">
-      <div
-        class="eo__dropdown__activator"
-        @mouseenter="show"
-        @mouseleave="hide"
-      >
+      <div ref="dropdown" class="eo__dropdown__activator" @click="showOrHide">
         <div class="language">
           <div class="flag">
             <div
@@ -33,8 +29,6 @@
           :class="[dropdownClassName, 'eo__dropdown__menu']"
           :style="dropdownStyle"
           v-show="visible"
-          @mouseenter="show"
-          @mouseleave="hide"
         >
           <ul>
             <li
@@ -358,12 +352,14 @@ export default {
     this.initUtils();
   },
   mounted() {
+    this.addClickEventListener();
     this.initGoogleTranslate();
     this.htmlLangObserver();
   },
   beforeDestroy() {
     this._googleTranslateSelectObserver.disconnect();
     this._htmlLangObserver.disconnect();
+    this.removeClickEventListener();
   },
   methods: {
     initUtils() {
@@ -623,24 +619,31 @@ export default {
       }
     },
     translateHandler(code) {
+      this.visible = false;
       this.doGTranslate(code);
       this.selectedLanguageCode = code;
 
       this.$emit("select", this.selectedLanguageInfo());
 
-      return false;
+      return;
     },
-    show() {
-      clearTimeout(this.timeout);
-      this.timeout = setTimeout(() => {
-        this.visible = true;
-      }, this.animateTimeout);
+    showOrHide() {
+      this.visible = !this.visible;
     },
-    hide() {
-      clearTimeout(this.timeout);
-      this.timeout = setTimeout(() => {
-        this.visible = false;
-      }, this.animateTimeout);
+    addClickEventListener() {
+      document.addEventListener(
+        "click",
+        e => {
+          let dropdown = this.$refs.dropdown;
+          if (dropdown && !dropdown.contains(e.target)) {
+            this.visible = false;
+          }
+        },
+        true,
+      );
+    },
+    removeClickEventListener() {
+      document.removeEventListener("click", () => {});
     },
   },
 };
