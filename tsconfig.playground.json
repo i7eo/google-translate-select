@@ -6,8 +6,8 @@
   "include": [
     "packages/*/src/**/*",
     "packages/*/package.json",
-    "apps/playground/main.ts",
-    "apps/playground/env.d.ts",
-    "apps/playground/src/**/*"
+    "apps/playground/*/main.ts",
+    "apps/playground/*/env.d.ts",
+    "apps/playground/*/src/**/*"
   ]
 }

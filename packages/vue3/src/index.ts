@@ -1,4 +1,7 @@
-import { PKG_CAMELCASE_NAME } from '@google-translate-select/constants'
+import { withInstall } from './utils'
+import Select from './google-translate-select.vue'
 
-console.log(PKG_CAMELCASE_NAME)
-console.log('@google-translate-select/vue3')
+export const GoogleTranslateSelect = withInstall(Select)
+export default GoogleTranslateSelect
+
+export * from './types/props'

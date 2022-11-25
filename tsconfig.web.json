@@ -5,8 +5,9 @@
   },
   "include": [
     "packages/*/src/**/*",
+    "packages/*/typings/**/*",
     "packages/*/package.json",
-    "typings/window.d.ts"
+    "typings/env.d.ts"
   ],
   "exclude": [
     "node_modules",

@@ -46,7 +46,7 @@
     "directory": "packages/utils"
   },
   "scripts": {
-    "build": "rimraf dist && tsup ./src/index.ts --format esm,cjs --dts",
+    "build": "rimraf dist && tsup --config ./build.config.ts",
     "lint": "run-s lint:**",
     "lint:eslint": "TIMING=1 eslint \"*.{js,jsx,ts,tsx,md,json}\" --fix",
     "lint:prettier": "prettier --write \"*.{js,ts,jsx,tsx,md,json}\"",

@@ -1,2 +1,2 @@
-@use './functions.scss';
-@use './namespace.scss';
+@use './helper/index.scss' as *;
+@use './util/index.scss' as *;

@@ -1,0 +1,60 @@
+/* stylelint-disable no-duplicate-selectors */
+// CSS3 var
+@use '../constants/var.scss' as *;
+@use '../mixins/helper/functions.scss' as *;
+
+// for better performance do not dynamically change the root variable if you really
+// do not need that, since this could introduce recalculation overhead for rendering.
+// https://lisilinhart.info/posts/css-variables-performance/
+
+// common
+:root {
+  // Typography
+  @include setCssVarMap('font-size', $font-size);
+  @include setCssVarMap('font-family', $font-family);
+
+  // z-index --xx-index-#{$type}
+  @include setCssVarMap('z-index', $z-index);
+
+  // --xx-border-radius-#{$type}
+  @include setCssVarMap('border-radius', $border-radius);
+
+  // Transition
+  // refer to this website to get the bezier motion function detail
+  // https://cubic-bezier.com/#p1,p2,p3,p4 (change px as your function parameter)
+  @include setCssVarMap('transition-duration', $transition-duration);
+  @include setCssVarMap('transition-function', $transition-function);
+  @include setCssVarMap('transition', $transition);
+}
+
+// for light
+:root {
+  @include setCssVar('color-white', $color-white);
+  @include setCssVar('color-black', $color-black);
+
+  // color-scheme
+  // --xxx-text-color-#{$type}
+  @include setCssVarMap('text-color', $text-color);
+  // --xxx-border-color-#{$type}
+  @include setCssVarMap('border-color', $border-color);
+  // Fill --xxx-fill-color-#{$type}
+  @include setCssVarMap('fill-color', $fill-color);
+
+  // Box-shadow
+  // --xxx-box-shadow-#{$type}
+  @include setCssVarMap('box-shadow', $box-shadow);
+  // Disable base
+  @include setCssVarMap('disabled', $disabled);
+
+  // Border
+  @include setCssVar('border-width', $border-width);
+  @include setCssVar('border-style', $border-style);
+  @include setCssVar('border-color-hover', $border-color-hover);
+  @include setCssVar(
+    'border',
+    getCssVar('border-width') getCssVar('border-style')
+      getCssVar('border-color')
+  );
+
+  color-scheme: light;
+}

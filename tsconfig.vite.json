@@ -1,12 +1,12 @@
 {
   "extends": "@google-translate-select/ts-config/vite.json",
+  "compilerOptions": {
+    "composite": true
+  },
   "include": [
     "**/vite.config.*",
     "**/vitest.config.*",
     "packages/constants/src/**/*",
     "packages/constants/package.json"
-  ],
-  "compilerOptions": {
-    "composite": true
-  }
+  ]
 }

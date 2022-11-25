@@ -1,0 +1,49 @@
+@use './constants/namespace.scss' as *;
+@use './mixins/util/index.scss' as *;
+@use './mixins/helper/namespace.scss' as ns;
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.#{$namespace}-icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+.#{$namespace}-icon--right {
+  margin-left: 5px;
+}
+
+.#{$namespace}-icon--left {
+  margin-right: 5px;
+}
+
+@include ns.b(icon) {
+  --color: inherit;
+
+  @include when(loading) {
+    animation: rotating 2s linear infinite;
+  }
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+  line-height: 1em;
+  color: var(--color);
+  fill: currentcolor;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}

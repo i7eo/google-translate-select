@@ -1,9 +1,62 @@
+export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
+  'en',
+  'af',
+  'sq',
+  'ar',
+  'hy',
+  'az',
+  'eu',
+  'be',
+  'bg',
+  'ca',
+  'zh-CN',
+  'zh-TW',
+  'hr',
+  'cs',
+  'da',
+  'nl',
+  'et',
+  'tl',
+  'fi',
+  'fr',
+  'de',
+  'el',
+  'hu',
+  'id',
+  'ga',
+  'it',
+  'ja',
+  'ko',
+  'lt',
+  'ms',
+  'no',
+  'pl',
+  'pt',
+  'ro',
+  'ru',
+  'es',
+  'sv',
+  'th',
+  'tr',
+  'uk',
+] as const
+
+export type LanguageCode =
+  typeof GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES[number]
+
+export interface Language {
+  code: LanguageCode
+  name: string
+  cname: string
+  ename: string
+}
+
 /**
  * 遵循 ISO 639-1 标准，俩位 code。google translate jssdk 支持的语种。(Complies with ISO 639-1 standard, two-digit code. Google translate js sdk supported.)
  *
  * reference: https://zh.wikipedia.org/wiki/ISO_639-1
  */
-export const GOOGLE_TRANSLATE_LANGUAGES_OPTIONS__ISO_639_1 = [
+export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
   {
     code: 'en',
     name: 'English',
