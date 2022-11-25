@@ -3,14 +3,26 @@
 ## 重构事项
 
 1. ~~使用 pnpm 创建项目~~
-2. 使用 monorepo （后期把master 的 vue2项目也放进来）
-3. ~~core~~
-4. ~~tsup 打包，考虑图片处理~~
-5. ~~changeset发包~~
-6. ~~使用 vue-demi 兼容 vue2 & vue3？~~
-7. ~~postinstall 调 gulp 生成 base64.json 然后转成scss变量~~
-8. ~~导出去一个 use hook 让用自定义ui？~~
-9. 是否需要把数据抛出去，让后拿着数据用自己项目中的ui生成组件？（需要讨论）
+2. ~~使用 monorepo 架构~~
+3. ~~分包:constants~~
+4. ~~分包:theme-chalk~~
+5. ~~分包:utils~~
+6. 分包:vue2（将之前的代码迁移进来？使用ts重写？）
+7. ~~分包:vue3~~
+8. 分包:react
+9. ~~tsup 打包，非ui组件~~
+10. ~~tsup 打包样式~~
+11. ~~vite 打包ui~~
+12. ~~changeset发包~~
+13. vitest 测试
+
+
+## 思考
+
+1. 是否需要把数据抛出去，让后拿着数据用自己项目中的ui生成组件？（需要讨论）
+2. 使用 popver 动态计算位置并生成下拉菜单？
+3. 使用 vue-demi 兼容 vue2 & vue3？
+4. 使用qiankun将playground整合为一个？
 
 ## 本地开发
 
