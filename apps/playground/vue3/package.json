@@ -42,6 +42,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google-translate-select/theme-chalk": "workspace:*",
+    "@google-translate-select/vue3": "workspace:*",
     "vue": "^3.2.41"
   },
   "devDependencies": {

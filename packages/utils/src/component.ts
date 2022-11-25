@@ -9,7 +9,7 @@ export interface CreateGoogleTranslateJsonpCallbackOptions {
    *
    * @default false
    */
-  autoDisplay: boolean
+  autoDisplay?: boolean
 }
 
 export function createGoogleTranslateJsonpCallback(

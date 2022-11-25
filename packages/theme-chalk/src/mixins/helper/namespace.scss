@@ -1,5 +1,5 @@
-@forward '../constants/ui.scss';
-@forward '../mixins/functions.scss';
+@use '../../constants/namespace.scss' as *;
+@use './functions.scss' as *;
 
 // BEM
 @mixin b($block) {
