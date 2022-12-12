@@ -2,9 +2,19 @@ import GoogleTranslateSelect from '@google-translate-select/react'
 import '@google-translate-select/theme-chalk/src/index.scss'
 
 function App() {
+  const handleGoogleTranslateSelect = (language: any) => {
+    console.log('select', language)
+  }
+
   return (
     <div className="react-container">
-      <GoogleTranslateSelect />
+      <GoogleTranslateSelect
+        defaultLanguageCode="en"
+        defaultPageLanguageCode="zh-CN"
+        fetchBrowserLanguage={false}
+        select={handleGoogleTranslateSelect}
+        className="demo"
+      />
       <div className="test">
         <h4>
           &nbsp; ①一个前端的自我修养
@@ -265,7 +275,7 @@ function App() {
           >
             回到顶部(go to top)
           </a>
-          <a name="_label1" rel="noopener" />
+          <a rel="noopener" />
         </div>
         <h4>
           ②写给初学前端工程师的一封信
@@ -328,7 +338,7 @@ function App() {
           >
             回到顶部(go to top)
           </a>
-          <a name="_label2" rel="noopener" />
+          <a rel="noopener" />
         </div>
         <h4>
           &nbsp;③谈谈我这三年在技术上的成长
