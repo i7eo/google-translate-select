@@ -22,7 +22,7 @@
   "license": "MIT",
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
   "main": "./dist/cjs/index.cjs",
-  "module": "./dist/es/index.mjs",
+  "module": "./src/index.ts",
   "types": "./dist/es/index.d.ts",
   "exports": {
     ".": {
