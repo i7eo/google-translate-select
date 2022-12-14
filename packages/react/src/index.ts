@@ -1,1 +1,4 @@
-console.log('@google-translate-select/react')
+import GoogleTranslateSelect from './google-translate-select'
+
+export default GoogleTranslateSelect
+export * from './types/props'
