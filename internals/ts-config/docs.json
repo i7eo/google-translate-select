@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "TSConfig Docs Module",
+  "extends": "./web.json",
+  "compilerOptions": {
+    "lib": ["ESNext", "WebWorker"],
+    "jsx": "preserve",
+    "declaration": true
+  }
+}

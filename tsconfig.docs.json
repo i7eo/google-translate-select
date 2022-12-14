@@ -1,0 +1,7 @@
+{
+  "extends": "@google-translate-select/ts-config/docs.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": ["apps/docs", "apps/docs/.vitepress"]
+}

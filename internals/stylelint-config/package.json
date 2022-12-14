@@ -1,0 +1,64 @@
+{
+  "name": "@google-translate-select/stylelint-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "🚀 The package offer stylelint for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "stylelint",
+    "stylelint-config"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/stylelint-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "internals/stylelint-config"
+  },
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.13.0"
+  },
+  "dependencies": {
+    "postcss": "^8.4.18",
+    "postcss-html": "^1.5.0",
+    "postcss-scss": "4.0.5",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-recommended-scss": "8.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "6.1.0",
+    "stylelint-order": "^5.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "^14.14.1"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@google-translate-select/lint-staged-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "🚀 The package offer lint-staged for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "lint-staged",
+    "lint-staged-config"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/lint-staged-config#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "internals/lint-staged-config"
+  },
+  "scripts": {
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "dependencies": {
+    "lint-staged": "^13.0.3"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

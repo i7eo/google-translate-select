@@ -1,0 +1,43 @@
+{
+  "pipeline": {
+    "dev": {
+      "cache": false
+    },
+
+    "build": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    },
+
+    "clean": {
+      "cache": false
+    },
+    "clean:cache": {
+      "cache": false
+    },
+
+    "lint": {
+      "cache": false,
+      "outputs": []
+    },
+    "lint:prettier": {
+      "cache": false,
+      "outputs": []
+    },
+
+    "format": {
+      "cache": false,
+      "outputs": []
+    },
+
+    "release": {
+      "cache": false
+    }
+  }
+}
