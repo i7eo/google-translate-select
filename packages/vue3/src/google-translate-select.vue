@@ -63,8 +63,8 @@
         </div>
       </transition>
     </div>
-    <div :id="GOOGLE_TRANSLATE_ORIGINAL_DOM_ID" />
   </div>
+  <div :id="GOOGLE_TRANSLATE_ORIGINAL_DOM_ID" />
 </template>
 
 <script lang="ts">

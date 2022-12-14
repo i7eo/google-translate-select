@@ -18,6 +18,7 @@ import {
   isString,
   useMutationObserver,
 } from '@google-translate-select/utils'
+import '@google-translate-select/theme-chalk/src/index.scss'
 import type { UseMutationObserverReturn } from '@google-translate-select/utils'
 import type { IGoogleTranslateProps } from './types/props'
 
@@ -330,7 +331,7 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
   const handleTranslate = (code: string) => {
     triggerTranslate(code)
     changeSelectedLanguageCode(code)
-    select(getSelectedLanguageOption(code))
+    select && select(getSelectedLanguageOption(code))
   }
 
   if (!languages || !languages.length) {
@@ -338,71 +339,73 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
   }
 
   return (
-    <div
-      className={cs([
-        ns.b(),
-        GOOGLE_TRANSLATE_STOP_TRANSLATE_CLASSNAME,
-        className,
-      ])}
-    >
-      <div className={ns.b('dropdown')}>
-        <div
-          className={ns.be('dropdown', 'activator')}
-          onMouseEnter={handleDropdownShow}
-          onMouseLeave={handleDropdownHide}
-        >
-          <div className={ns.b('language')}>
-            <div className={ns.b('flag')}>
-              <div className={ns.be('flag', selectedLanguageOption.code)}></div>
+    <>
+      <div
+        className={cs([
+          ns.b(),
+          GOOGLE_TRANSLATE_STOP_TRANSLATE_CLASSNAME,
+          className,
+        ])}
+      >
+        <div className={ns.b('dropdown')}>
+          <div
+            className={ns.be('dropdown', 'activator')}
+            onMouseEnter={handleDropdownShow}
+            onMouseLeave={handleDropdownHide}
+          >
+            <div className={ns.b('language')}>
+              <div className={ns.b('flag')}>
+                <div className={ns.be('flag', selectedLanguageOption?.code)} />
+              </div>
+              {selectedLanguageOption?.name}
             </div>
-            {selectedLanguageOption?.name}
+            {showArrow && (
+              <div
+                className={cs([ns.b('icon'), visible ? ns.is('reverse') : ''])}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                  <path
+                    fill="currentColor"
+                    d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"
+                  />
+                </svg>
+              </div>
+            )}
           </div>
-          {showArrow && (
-            <div
-              className={cs([ns.b('icon'), visible ? ns.is('reverse') : ''])}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-                <path
-                  fill="currentColor"
-                  d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"
-                />
-              </svg>
-            </div>
-          )}
-        </div>
-        <div
-          className={cs([ns.be('dropdown', 'menu'), dropdownClassName])}
-          style={{ display: visible ? '' : 'none', ...dropdownStyles }}
-          onMouseEnter={handleDropdownShow}
-          onMouseLeave={handleDropdownHide}
-        >
-          <ul>
-            {languages.map((language) => {
-              return (
-                <li
-                  key={`language-${language.code}`}
-                  className={cs([
-                    ns.be('dropdown', 'menu__item'),
-                    selectedLanguageCode === language.code ? 'selected' : '',
-                  ])}
-                  data-language-code={language.code}
-                  onClick={() => {
-                    handleTranslate(language.code)
-                  }}
-                >
-                  <div className={ns.b('language')}>
-                    <div className={ns.b('flag')}>
-                      <div className={ns.be('flag', language.code)}></div>
+          <div
+            className={cs([ns.be('dropdown', 'menu'), dropdownClassName])}
+            style={{ display: visible ? '' : 'none', ...dropdownStyles }}
+            onMouseEnter={handleDropdownShow}
+            onMouseLeave={handleDropdownHide}
+          >
+            <ul>
+              {languages.map((language) => {
+                return (
+                  <li
+                    key={`language-${language.code}`}
+                    className={cs([
+                      ns.be('dropdown', 'menu__item'),
+                      selectedLanguageCode === language.code ? 'selected' : '',
+                    ])}
+                    data-language-code={language.code}
+                    onClick={() => {
+                      handleTranslate(language.code)
+                    }}
+                  >
+                    <div className={ns.b('language')}>
+                      <div className={ns.b('flag')}>
+                        <div className={ns.be('flag', language.code)}></div>
+                      </div>
+                      {language.name}
                     </div>
-                    {language.name}
-                  </div>
-                </li>
-              )
-            })}
-          </ul>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </div>
       </div>
       <div id={GOOGLE_TRANSLATE_ORIGINAL_DOM_ID} />
-    </div>
+    </>
   )
 }
