@@ -15,10 +15,13 @@ const apps = fs
   .map((name) => `${PKG_PREFIX}/${name}`)
 // Internal packages
 const internal = fs
-  .readdirSync(path.resolve(__dirname, '../../internal'))
+  .readdirSync(path.resolve(__dirname, '../../internals'))
   .map((name) => `${PKG_PREFIX}/${name}`)
-// Umbrella package
-const componentsPkg = `${PKG_PREFIX}/ui`
+// Umbrella packages
+// const componentsPkg = `${PKG_PREFIX}/ui`
+const umbrellaPackages = fs
+  .readdirSync(path.resolve(__dirname, '../../packages'))
+  .map((name) => `${PKG_PREFIX}/${name}`)
 // Packages we don't want to have on changelog
 const ignorePkgs = [...apps, ...internal]
 
@@ -30,6 +33,7 @@ function startCase(string: string) {
     .reduce((str: string, x: any) => `${str.trim()} ${toStartCase(x)}`, '')
     .trim()
 }
+
 function getPackageName(name: string) {
   return startCase(name.replace(`${PKG_PREFIX}/`, ''))
 }
@@ -46,13 +50,14 @@ function getReleaseSummary(
       : `- ${summary} \n`
   })
 
-  const subPackageName = `**${getPackageName(release.name)}** \`v${
-    release.newVersion
-  }\``
+  // const subPackageName = `**${getPackageName(release.name)}** \`v${
+  //   release.newVersion
+  // }\``
+  // const rootPackageName = `\`${componentsPkg}@${release.newVersion}\``
+  // const displayName =
+  //   release.name === componentsPkg ? rootPackageName : subPackageName
 
-  const rootPackageName = `\`${componentsPkg}@${release.newVersion}\``
-  const displayName =
-    release.name === componentsPkg ? rootPackageName : subPackageName
+  const displayName = `**${release.name}** \`v${release.newVersion}\``
 
   return {
     ...release,
@@ -81,8 +86,10 @@ async function getChangesetEntries() {
     .map((release) => getReleaseSummary(releasePlan.changesets, release))
     .sort((a, b) => {
       // Sort umbrella package at the top, and others alphabetically
-      if (a.name === componentsPkg) return -1
-      if (b.name === componentsPkg) return 1
+      // if (a.name === componentsPkg) return -1
+      // if (b.name === componentsPkg) return 1
+      if (umbrellaPackages.includes(a.name)) return -1
+      if (umbrellaPackages.includes(b.name)) return 1
       return a.name < b.name ? -1 : 1
     })
 
