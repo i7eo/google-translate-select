@@ -1,6 +1,6 @@
 import { GOOGLE_TRANSLATE_SELECT_LANGUAGES } from '@google-translate-select/constants'
 import type { Language as ILanguage } from '@google-translate-select/constants'
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { CSSProperties, ExtractPropTypes, PropType } from 'vue'
 
 export const googleTranslateProps = {
   /** select dropdown option */
@@ -13,7 +13,7 @@ export const googleTranslateProps = {
     type: String,
     default: 'en',
   },
-  /** page(browser) default language */
+  /** page(browser) content language */
   defaultPageLanguageCode: {
     type: String,
     default: 'en',
@@ -33,12 +33,16 @@ export const googleTranslateProps = {
     default: '',
   },
   dropdownStyle: {
-    type: Object,
+    type: Object as PropType<CSSProperties>,
     default: () => ({}),
   },
   showArrow: {
     type: Boolean,
     default: true,
+  },
+  trigger: {
+    type: String as PropType<'click' | 'hover'>,
+    default: 'hover',
   },
 } as const
 

@@ -4,8 +4,11 @@
     "composite": true
   },
   "include": [
+    "**/vitest.config.*",
     "packages/*/src/**/*",
     "packages/*/package.json",
+    "packages/*/typings/**/*",
+    "typings/env.d.ts",
     "packages/**/__tests__/**/*",
     "packages/**/tests/**/*"
   ],

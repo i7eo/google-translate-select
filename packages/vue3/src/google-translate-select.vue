@@ -1,11 +1,19 @@
 <template>
-  <div v-if="hasLanguages" :class="getClass">
+  <div
+    v-if="hasLanguages"
+    ref="googleTranslateSelectEl"
+    :class="getClass"
+    v-bind="
+      trigger === 'hover'
+        ? {
+            onMouseover: handleDropdownShowByHover,
+            onMouseleave: handleDropdownHideByHover,
+          }
+        : null
+    "
+  >
     <div :class="[ns.b('dropdown')]">
-      <div
-        :class="[ns.be('dropdown', 'activator')]"
-        @mouseenter="handleDropdownShow"
-        @mouseleave="handleDropdownHide"
-      >
+      <div :class="[ns.be('dropdown', 'activator')]">
         <div :class="[ns.b('language')]">
           <div :class="[ns.b('flag')]">
             <div :class="[ns.be('flag', selectedLanguageOption.code)]" />
@@ -29,8 +37,6 @@
           v-show="visible"
           :class="[ns.be('dropdown', 'menu'), dropdownClassName]"
           :style="dropdownStyle"
-          @mouseenter="handleDropdownShow"
-          @mouseleave="handleDropdownHide"
         >
           <ul>
             <li
@@ -87,6 +93,7 @@ import {
   GOOGLE_TRANSLATE_ORIGINAL_SELECT_CLASSNAME,
   GOOGLE_TRANSLATE_STOP_TRANSLATE_CLASSNAME,
 } from '@google-translate-select/constants'
+import '@google-translate-select/theme-chalk/src/index.scss'
 import { googleTranslateProps } from './types'
 import type { UseMutationObserverReturn } from '@google-translate-select/utils'
 
@@ -98,6 +105,7 @@ export default defineComponent({
   props: googleTranslateProps,
   emits: ['select'],
   setup(props, { emit, attrs }) {
+    const googleTranslateSelectEl = ref<HTMLElement | null>(null)
     const visible = ref<boolean>(false)
     const selectedLanguageCode = ref<string>('')
     const hoveredLanguageCode = ref<string>('')
@@ -331,11 +339,11 @@ export default defineComponent({
      * Use browser language、cookie 'googtrans' to get language code
      */
     function setSelectedLanguageCode() {
-      const browserLanguage = props.fetchBrowserLanguage
+      const isFetchBrowserLanguageOpen = props.fetchBrowserLanguage
+      const browserLanguage = isFetchBrowserLanguageOpen
         ? isLanguageCodeInLanguages(getBrowserLanguage())
         : ''
       const googleCookieLanguage = getGoogleCookieLanguage()
-      const isFetchBrowserLanguageOpen = props.fetchBrowserLanguage
       const isGoogleCookieLanguageExist = !!googleCookieLanguage
 
       const handleDefaultLanguage = () => {
@@ -382,52 +390,80 @@ export default defineComponent({
       handleTranslate(selectedCode)
     }
 
-    function handleDropdownShow() {
-      clearTimeout(unref(setTimeoutId))
-      setTimeoutId.value = window.setTimeout(() => {
-        visible.value = true
-      }, props.animateTimeout)
-    }
-
-    function handleDropdownHide() {
-      clearTimeout(unref(setTimeoutId))
-      setTimeoutId.value = window.setTimeout(() => {
-        visible.value = false
-      }, props.animateTimeout)
-    }
-
     function handleTranslate(code: string) {
       triggerTranslate(code)
       selectedLanguageCode.value = code
 
       emit('select', getSelectedLanguageOption())
+    }
 
-      return false
+    function clearSettimeout() {
+      clearTimeout(unref(setTimeoutId))
+      setTimeoutId.value = -1
+    }
+
+    function handleDropdownShowByHover(e: Event) {
+      clearSettimeout()
+      setTimeoutId.value = window.setTimeout(() => {
+        const target = e.target as HTMLElement
+        if (
+          unref(googleTranslateSelectEl) &&
+          unref(googleTranslateSelectEl)?.contains(target)
+        ) {
+          visible.value = true
+        }
+      }, 0)
+    }
+
+    function handleDropdownHideByHover() {
+      clearSettimeout()
+      setTimeoutId.value = window.setTimeout(() => {
+        visible.value = false
+      }, props.animateTimeout)
+    }
+
+    function handleDropdownShowOrHideByClick(e: Event) {
+      const target = e.target as HTMLElement
+      if (
+        unref(googleTranslateSelectEl) &&
+        unref(googleTranslateSelectEl)?.contains(target)
+      ) {
+        visible.value = true
+      } else {
+        visible.value = false
+      }
     }
 
     onMounted(() => {
       createGoogleTranslate()
       createHtmlAttrLangObserve()
+
+      if (props.trigger === 'click')
+        document.addEventListener('click', handleDropdownShowOrHideByClick)
     })
 
     onBeforeUnmount(() => {
       unref(googleTranslateOriginSelectObserve)!.stop!()
       unref(htmlAttrLangObserve)!.stop!()
+
+      if (props.trigger === 'click')
+        document.removeEventListener('click', handleDropdownShowOrHideByClick)
     })
 
     return {
       ns,
-      getClass,
-      getBindValue,
-      hasLanguages,
+      googleTranslateSelectEl,
       visible,
       selectedLanguageCode,
       hoveredLanguageCode,
-      handleDropdownShow,
-      handleDropdownHide,
-      GOOGLE_TRANSLATE_ORIGINAL_DOM_ID,
+      getBindValue,
+      getClass,
+      hasLanguages,
       selectedLanguageOption,
       handleTranslate,
+      handleDropdownShowByHover,
+      handleDropdownHideByHover,
+      GOOGLE_TRANSLATE_ORIGINAL_DOM_ID,
     }
   },
 })

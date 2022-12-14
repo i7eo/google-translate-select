@@ -3,53 +3,16 @@
     "dev": {
       "cache": false
     },
-    "dev:react": {
-      "dependsOn": ["@google-translate-select/playground-react#dev"],
-      "cache": false
-    },
-    "dev:vue2": {
-      "dependsOn": ["@google-translate-select/playground-vue2#dev"],
-      "cache": false
-    },
-    "dev:vue3": {
-      "dependsOn": ["@google-translate-select/playground-vue3#dev"],
-      "cache": false
-    },
 
     "build": {
       "outputs": ["dist/**"],
       "dependsOn": ["^build"],
       "cache": false
     },
-    "build:react": {
-      "outputs": ["dist/**"],
-      "dependsOn": [
-        "@google-translate-select/constants#build",
-        "@google-translate-select/utils#build",
-        "@google-translate-select/theme-chalk#build",
-        "@google-translate-select/react#build"
-      ],
-      "cache": false
-    },
-    "build:vue2": {
-      "outputs": ["dist/**"],
-      "dependsOn": [
-        "@google-translate-select/constants#build",
-        "@google-translate-select/utils#build",
-        "@google-translate-select/theme-chalk#build",
-        "@google-translate-select/vue2#build"
-      ],
-      "cache": false
-    },
-    "build:vue3": {
-      "outputs": ["dist/**"],
-      "dependsOn": [
-        "@google-translate-select/constants#build",
-        "@google-translate-select/utils#build",
-        "@google-translate-select/theme-chalk#build",
-        "@google-translate-select/vue3#build"
-      ],
-      "cache": false
+
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
     },
 
     "clean": {
@@ -71,11 +34,6 @@
     "format": {
       "cache": false,
       "outputs": []
-    },
-
-    "test": {
-      "outputs": ["coverage/**"],
-      "dependsOn": []
     },
 
     "release": {
