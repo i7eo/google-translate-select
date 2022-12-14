@@ -1,7 +1,3 @@
----
-title: 'google-translate-select library'
-lang: en-US
-page: true
----
+# @google-translate-select/docs
 
-<!-- Placeholder -->
+🚀 The package offer docs for @google-translate-select!
