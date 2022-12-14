@@ -5,8 +5,9 @@
   },
   "include": [
     "**/vite.config.*",
-    "**/vitest.config.*",
     "packages/constants/src/**/*",
-    "packages/constants/package.json"
+    "packages/constants/package.json",
+    "packages/*/typings/**/*",
+    "typings/env.d.ts"
   ]
 }

@@ -5,8 +5,8 @@
   },
   "include": [
     "packages/*/src/**/*",
-    "packages/*/typings/**/*",
     "packages/*/package.json",
+    "packages/*/typings/**/*",
     "typings/env.d.ts"
   ],
   "exclude": [
