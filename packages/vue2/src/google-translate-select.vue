@@ -57,19 +57,12 @@
         </div>
       </transition>
     </div>
+    <div :id="GOOGLE_TRANSLATE_ORIGINAL_DOM_ID" />
   </div>
-  <div :id="GOOGLE_TRANSLATE_ORIGINAL_DOM_ID" />
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  defineComponent,
-  onBeforeUnmount,
-  onMounted,
-  ref,
-  unref,
-} from 'vue'
+import Vue from 'vue'
 import {
   GoogleTranslateFireEvent,
   createGoogleTranslateJsonpCallback,
@@ -90,104 +83,152 @@ import {
 import '@google-translate-select/theme-chalk/src/index.scss'
 import { googleTranslateProps } from './types'
 import type { UseMutationObserverReturn } from '@google-translate-select/utils'
+import type { Language as ILanguage } from '@google-translate-select/constants'
+
+interface Data {
+  googleTranslateSelectEl: HTMLElement | null
+  visible: boolean
+  selectedLanguageCode: string
+  hoveredLanguageCode: string
+  setTimeoutId: number
+  jsonCallbackFnName: string
+  googleTranslateOriginSelectObserve: Partial<UseMutationObserverReturn> | null
+  htmlAttrLangObserve: Partial<UseMutationObserverReturn> | null
+  ns: typeof ns
+  GOOGLE_TRANSLATE_ORIGINAL_DOM_ID: string
+}
 
 const ns = createNamespace('select')
 
-export default defineComponent({
+export default Vue.extend<
+  Data,
+  Record<string, any>,
+  Record<string, any>,
+  Record<string, any>
+>({
   name: ns.n,
   inheritAttrs: false,
   props: googleTranslateProps,
-  emits: ['select'],
-  setup(props, { emit, attrs }) {
-    const googleTranslateSelectEl = ref<HTMLElement | null>(null)
-    const visible = ref<boolean>(false)
-    const selectedLanguageCode = ref<string>('')
-    const hoveredLanguageCode = ref<string>('')
-    const setTimeoutId = ref<number>(-1)
-    const jsonCallbackFnName = ref<string>('')
-    const googleTranslateOriginSelectObserve =
-      ref<Partial<UseMutationObserverReturn> | null>({})
-    const htmlAttrLangObserve = ref<Partial<UseMutationObserverReturn> | null>(
-      {}
-    )
+  data() {
+    return {
+      googleTranslateSelectEl: null,
+      visible: false,
+      selectedLanguageCode: '',
+      hoveredLanguageCode: '',
+      setTimeoutId: -1,
+      jsonCallbackFnName: '',
+      googleTranslateOriginSelectObserve: {},
+      htmlAttrLangObserve: {},
+      ns,
+      GOOGLE_TRANSLATE_ORIGINAL_DOM_ID,
+    }
+  },
+  computed: {
+    getClass() {
+      return [
+        ns.b(),
+        GOOGLE_TRANSLATE_STOP_TRANSLATE_CLASSNAME,
+        this.$attrs.class,
+      ]
+    },
+    hasLanguages() {
+      return this.languages && this.languages.length
+    },
+    selectedLanguageOption() {
+      return this.getSelectedLanguageOption()
+    },
+  },
+  mounted() {
+    this.googleTranslateSelectEl = this.$refs[
+      'googleTranslateSelectEl'
+    ] as HTMLElement
+    this.createGoogleTranslate()
+    this.createHtmlAttrLangObserve()
 
-    const getClass = computed(() => {
-      return [ns.b(), GOOGLE_TRANSLATE_STOP_TRANSLATE_CLASSNAME, attrs.class]
-    })
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const _this = this
+    if (this.trigger === 'click')
+      document.addEventListener('click', _this.handleDropdownShowOrHideByClick)
+  },
+  // @ts-ignore
+  beforeUnmount() {
+    this.googleTranslateOriginSelectObserve!.stop!()
+    this.htmlAttrLangObserve!.stop!()
 
-    const hasLanguages = computed(
-      () => props.languages && props.languages.length
-    )
-
-    /** cache current select language */
-    const selectedLanguageOption = computed(() => getSelectedLanguageOption())
-
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const _this = this
+    if (this.trigger === 'click')
+      document.removeEventListener(
+        'click',
+        _this.handleDropdownShowOrHideByClick
+      )
+  },
+  methods: {
     /**
      * get current select language
      */
-    function getSelectedLanguageOption() {
-      const selectedLanguageOption = props.languages.find(
-        (language) => language.code === unref(selectedLanguageCode)
+    getSelectedLanguageOption() {
+      const selectedLanguageOption = this.languages.find(
+        (language: ILanguage) => language.code === this.selectedLanguageCode
       )
       if (selectedLanguageOption) {
         return selectedLanguageOption
       } else {
-        const defaultSelectedLanguageOption = props.languages.find(
-          (language) => language.code === props.defaultLanguageCode
+        const defaultSelectedLanguageOption = this.languages.find(
+          (language: ILanguage) => language.code === this.defaultLanguageCode
         )
-        return defaultSelectedLanguageOption!
+        return defaultSelectedLanguageOption
       }
-    }
-
+    },
     /**
      * dynamic insert style for GoogleTranslate
      */
-    function createStyle() {
+    createStyle() {
       return createStyleTag(
         `body { top: 0 !important; } .skiptranslate { display: none !important; }`
       )
-    }
-
+    },
     /**
      * create jsonp callback for GoogleTranslate, when GoogleTranslate loaded callback will be triggered
      */
-    function createJsonCallback() {
-      const pageLanguage = props.defaultPageLanguageCode
+    createJsonCallback() {
+      // eslint-disable-next-line @typescript-eslint/no-this-alias
+      const _this = this
+      const pageLanguage = this.defaultPageLanguageCode
       const { jsonpCallbackName } = createGoogleTranslateJsonpCallback(
         {
           pageLanguage,
         },
-        setSelectedLanguageCode
+        _this.setSelectedLanguageCode
       )
-      jsonCallbackFnName.value = jsonpCallbackName
-    }
-
+      _this.jsonCallbackFnName = jsonpCallbackName
+    },
     /**
      * pass jsonp callback to GoogleTranslate
      */
-    function createScript() {
+    createScript() {
+      // eslint-disable-next-line @typescript-eslint/no-this-alias
+      const _this = this
       return createScriptTag(
-        `${GOOGLE_TRANSLATE_JSSDK_URL}?cb=${unref(jsonCallbackFnName)}`
+        `${GOOGLE_TRANSLATE_JSSDK_URL}?cb=${_this.jsonCallbackFnName}`
       )
-    }
-
+    },
     /**
      * GoogleTranslate init
      */
-    function createGoogleTranslate() {
-      createStyle()
-      createJsonCallback()
-      createScript()
-    }
-
+    createGoogleTranslate() {
+      this.createStyle()
+      this.createJsonCallback()
+      this.createScript()
+    },
     /**
      * Triggers translations by observe changes in the DOM of GoogleTranslate's original select.
      *
      * Because the callback function passed in JSONP can only be called after the GOOGLE_TRANSLATE_JSSDK_URL resource is loaded,
      * and the GOOGLE_TRANSLATE_JSSDK_URL will import the resource that generated the original DOM, observe is used here🤓
      */
-    function createGoogleTranslateOriginSelectObserve() {
-      googleTranslateOriginSelectObserve.value = useMutationObserver(
+    createGoogleTranslateOriginSelectObserve() {
+      this.googleTranslateOriginSelectObserve = useMutationObserver(
         document.querySelector(GOOGLE_TRANSLATE_ORIGINAL_SELECT_CLASSNAME)!,
         (records) => {
           records.forEach((record) => {
@@ -196,10 +237,10 @@ export default defineComponent({
               (record.addedNodes[0] as HTMLOptionElement).value
             ) {
               if (
-                selectedLanguageCode.value ===
+                this.selectedLanguageCode ===
                 (record.addedNodes[0] as HTMLOptionElement).value
               ) {
-                triggerTranslate(
+                this.triggerTranslate(
                   (record.addedNodes[0] as HTMLOptionElement).value
                 )
               }
@@ -211,16 +252,14 @@ export default defineComponent({
           subtree: true,
         }
       )
-
-      unref(googleTranslateOriginSelectObserve)!.start!()
-    }
-
+      this.googleTranslateOriginSelectObserve!.start!()
+    },
     /**
      * When GoogleTranslate's original executes, the attribute 'lang' of HTML will have an auto state,
      * in order to overwrite the auto state, we call the 'handleTranslate' again
      */
-    function createHtmlAttrLangObserve() {
-      htmlAttrLangObserve.value = useMutationObserver(
+    createHtmlAttrLangObserve() {
+      this.htmlAttrLangObserve = useMutationObserver(
         document.querySelector('html')!,
         (records) => {
           records.forEach((record) => {
@@ -236,7 +275,7 @@ export default defineComponent({
                 oldValue !== 'auto' &&
                 currentValue === 'auto'
               ) {
-                handleTranslate(unref(selectedLanguageCode))
+                this.handleTranslate(this.selectedLanguageCode)
               }
             }
           })
@@ -247,17 +286,15 @@ export default defineComponent({
         }
       )
 
-      unref(htmlAttrLangObserve)!.start!()
-    }
-
+      this.htmlAttrLangObserve!.start!()
+    },
     /**
      * Simulates the change event of select to manually trigger GoogleTranslate
      *
      * @param select
      */
-    function triggerTranslate(select: HTMLSelectElement | string) {
+    triggerTranslate(select: HTMLSelectElement | string) {
       if (!select) return
-
       let selectValue = ''
       if (isString(select)) {
         selectValue = select
@@ -275,33 +312,32 @@ export default defineComponent({
         googleTranslateSelectEl.innerHTML.length === 0 ||
         googleTranslateOriginalSelectEl.options.length === 0
       ) {
-        createGoogleTranslateOriginSelectObserve()
+        this.createGoogleTranslateOriginSelectObserve()
       } else {
         googleTranslateOriginalSelectEl.value = selectValue
         GoogleTranslateFireEvent(googleTranslateOriginalSelectEl, 'change')
-        unref(googleTranslateOriginSelectObserve) &&
-          unref(googleTranslateOriginSelectObserve)!.stop!()
+        this.googleTranslateOriginSelectObserve &&
+          this.googleTranslateOriginSelectObserve!.stop!()
       }
-    }
-
+    },
     /**
      * Determines whether the current select language exists in the props.languages
      *
      * @param code
      */
-    function isLanguageCodeInLanguages(code: string) {
+    isLanguageCodeInLanguages(code: string) {
       // 如果 code 不存在于语言列表中默认使用英语
-      const result = props.languages.find((language) => language.code === code)
+      const result = this.languages.find(
+        (language: ILanguage) => language.code === code
+      )
       return result ? code : 'en'
-    }
-
+    },
     /**
      * Get browser language
      */
-    function getBrowserLanguage() {
+    getBrowserLanguage() {
       const browserLanguage =
         window.navigator.language || document.documentElement.lang || 'en'
-
       const filterLanguages = ['zh-CN', 'zh-TW']
       if (filterLanguages.every((l) => l !== browserLanguage)) {
         if (browserLanguage.indexOf('-') > -1) {
@@ -309,14 +345,12 @@ export default defineComponent({
         }
       }
       return browserLanguage
-    }
-
+    },
     /**
      * After triggering GoogleTranslate Translate, a cookie called 'googtrans' is generated, such as '/en/tr'
      */
-    function getGoogleCookieLanguage() {
+    getGoogleCookieLanguage() {
       const googleTranslateCookie = getCookie(GOOGLE_TRANSLATE_COOKIE_NAME)
-
       if (googleTranslateCookie) {
         const googleTranslateCookieResult = googleTranslateCookie.split('/')
         return googleTranslateCookieResult[2]
@@ -325,30 +359,27 @@ export default defineComponent({
       } else {
         return ''
       }
-    }
-
+    },
     /**
      * Use browser language、cookie 'googtrans' to get language code
      */
-    function setSelectedLanguageCode() {
-      const isFetchBrowserLanguageOpen = props.fetchBrowserLanguage
+    setSelectedLanguageCode() {
+      const isFetchBrowserLanguageOpen = this.fetchBrowserLanguage
       const browserLanguage = isFetchBrowserLanguageOpen
-        ? isLanguageCodeInLanguages(getBrowserLanguage())
+        ? this.isLanguageCodeInLanguages(this.getBrowserLanguage())
         : ''
-      const googleCookieLanguage = getGoogleCookieLanguage()
+      const googleCookieLanguage = this.getGoogleCookieLanguage()
       const isGoogleCookieLanguageExist = !!googleCookieLanguage
-
       const handleDefaultLanguage = () => {
-        if (props.defaultLanguageCode) {
-          return props.defaultLanguageCode
+        if (this.defaultLanguageCode) {
+          return this.defaultLanguageCode
         } else {
           return 'en'
         }
       }
-
       const handleBrowserLanguageInLanguages = () => {
-        const isBrowserLanguageInLanguages = !!props.languages.find(
-          (language) => language.code === browserLanguage
+        const isBrowserLanguageInLanguages = !!this.languages.find(
+          (language: ILanguage) => language.code === browserLanguage
         )
         if (isBrowserLanguageInLanguages) {
           return browserLanguage
@@ -356,10 +387,9 @@ export default defineComponent({
           return handleDefaultLanguage()
         }
       }
-
       const handleGoogleCookieLanguageInLanguages = () => {
-        const isGoogleCookieLanguageInLanguages = !!props.languages.find(
-          (language) => language.code === googleCookieLanguage
+        const isGoogleCookieLanguageInLanguages = !!this.languages.find(
+          (language: ILanguage) => language.code === googleCookieLanguage
         )
         if (isGoogleCookieLanguageInLanguages) {
           return googleCookieLanguage
@@ -367,7 +397,6 @@ export default defineComponent({
           return handleDefaultLanguage()
         }
       }
-
       let selectedCode = handleDefaultLanguage()
       if (!isGoogleCookieLanguageExist) {
         // 首次
@@ -378,88 +407,52 @@ export default defineComponent({
         // 越过浏览器语言判断直接去列表中匹配
         selectedCode = handleGoogleCookieLanguageInLanguages()
       }
-
-      handleTranslate(selectedCode)
-    }
-
-    function handleTranslate(code: string) {
-      triggerTranslate(code)
-      selectedLanguageCode.value = code
-
-      emit('select', getSelectedLanguageOption())
-    }
-
-    function clearSettimeout() {
-      clearTimeout(unref(setTimeoutId))
-      setTimeoutId.value = -1
-    }
-
-    function handleDropdownShowByHover(e: Event) {
-      if (props.trigger === 'hover') {
-        clearSettimeout()
-        setTimeoutId.value = window.setTimeout(() => {
+      this.handleTranslate(selectedCode)
+    },
+    handleTranslate(code: string) {
+      this.triggerTranslate(code)
+      this.selectedLanguageCode = code
+      this.$emit('select', this.getSelectedLanguageOption())
+    },
+    clearSettimeout() {
+      // eslint-disable-next-line @typescript-eslint/no-this-alias
+      const _this = this
+      window.clearTimeout(_this.setTimeoutId)
+      this.setTimeoutId = -1
+    },
+    handleDropdownShowByHover(e: Event) {
+      if (this.trigger === 'hover') {
+        this.clearSettimeout()
+        this.setTimeoutId = window.setTimeout(() => {
           const target = e.target as HTMLElement
           if (
-            unref(googleTranslateSelectEl) &&
-            unref(googleTranslateSelectEl)?.contains(target)
+            this.googleTranslateSelectEl &&
+            this.googleTranslateSelectEl.contains(target)
           ) {
-            visible.value = true
+            this.visible = true
           }
         }, 0)
       }
-    }
-
-    function handleDropdownHideByHover() {
-      if (props.trigger === 'hover') {
-        clearSettimeout()
-        setTimeoutId.value = window.setTimeout(() => {
-          visible.value = false
-        }, props.animateTimeout)
+    },
+    handleDropdownHideByHover() {
+      if (this.trigger === 'hover') {
+        this.clearSettimeout()
+        this.setTimeoutId = window.setTimeout(() => {
+          this.visible = false
+        }, this.animateTimeout)
       }
-    }
-
-    function handleDropdownShowOrHideByClick(e: Event) {
+    },
+    handleDropdownShowOrHideByClick(e: Event) {
       const target = e.target as HTMLElement
       if (
-        unref(googleTranslateSelectEl) &&
-        unref(googleTranslateSelectEl)?.contains(target)
+        this.googleTranslateSelectEl &&
+        this.googleTranslateSelectEl.contains(target)
       ) {
-        visible.value = true
+        this.visible = true
       } else {
-        visible.value = false
+        this.visible = false
       }
-    }
-
-    onMounted(() => {
-      createGoogleTranslate()
-      createHtmlAttrLangObserve()
-
-      if (props.trigger === 'click')
-        document.addEventListener('click', handleDropdownShowOrHideByClick)
-    })
-
-    onBeforeUnmount(() => {
-      unref(googleTranslateOriginSelectObserve)!.stop!()
-      unref(htmlAttrLangObserve)!.stop!()
-
-      if (props.trigger === 'click')
-        document.removeEventListener('click', handleDropdownShowOrHideByClick)
-    })
-
-    return {
-      ns,
-      googleTranslateSelectEl,
-      visible,
-      selectedLanguageCode,
-      hoveredLanguageCode,
-      getClass,
-      hasLanguages,
-      selectedLanguageOption,
-      handleTranslate,
-      handleDropdownShowByHover,
-      handleDropdownHideByHover,
-      GOOGLE_TRANSLATE_ORIGINAL_DOM_ID,
-    }
+    },
   },
 })
 </script>

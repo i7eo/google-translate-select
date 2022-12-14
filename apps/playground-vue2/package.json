@@ -1,17 +1,18 @@
 {
-  "name": "@google-translate-select/playground-react",
-  "version": "0.0.1",
+  "name": "@google-translate-select/playground-vue2",
+  "version": "0.0.0",
   "private": true,
-  "description": "🚀 The package offer react playground for @google-translate-select!",
+  "description": "🚀 The package offer vue2 playground for @google-translate-select!",
   "keywords": [
     "google translate select",
     "google translate",
     "google",
     "translate",
-    "react",
-    "React",
-    "react google translate",
-    "react google translate select",
+    "Vue2",
+    "Vue",
+    "vue2 vite",
+    "vue google translate",
+    "vue google translate select",
     "monorepo",
     "pnpm",
     "turborepo",
@@ -28,7 +29,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/i7eo/v-google-translate.git",
-    "directory": "apps/playground/react"
+    "directory": "apps/playground/vue2"
   },
   "scripts": {
     "lint": "run-s lint:**",
@@ -38,21 +39,22 @@
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google-translate-select/react": "workspace:*",
-    "@google-translate-select/theme-chalk": "workspace:*",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@google-translate-select/vue2": "workspace:*",
+    "vue": "2.6.11"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^3.0.0",
     "sass": "^1.56.1",
+    "terser": "5.4.0",
     "typescript": "^4.8.4",
-    "vite": "^4.0.1"
+    "vite": "^3.0.0",
+    "vite-plugin-vue2": "^2.0.2",
+    "vue-template-compiler": "2.6.11"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
