@@ -23,7 +23,7 @@
     "commitlint",
     "commitlint-config"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/commitlint-config#readme",
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/internals/commitlint-config#readme",
   "bugs": {
     "url": "https://github.com/i7eo/v-google-translate/issues"
   },
