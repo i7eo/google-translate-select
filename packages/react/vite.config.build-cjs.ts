@@ -1,5 +1,7 @@
 import { resolve } from 'path'
-import type { UserConfigExport } from 'vitest/config'
+import React from '@vitejs/plugin-react'
+import Dts from 'vite-plugin-dts'
+import type { UserConfigExport } from 'vite'
 
 export default (): UserConfigExport => {
   const packageDir = './src'
@@ -7,11 +9,23 @@ export default (): UserConfigExport => {
   const outDir = resolve(__dirname, 'dist/cjs')
   return {
     mode: 'production',
+    plugins: [
+      React(),
+      Dts({
+        insertTypesEntry: true,
+        cleanVueFileName: true,
+        skipDiagnostics: false,
+        tsConfigFilePath: '../../tsconfig.web-react.json',
+        include: [packageDir],
+        entryRoot: packageDir,
+      }),
+    ],
     build: {
       target: 'modules',
-      minify: true,
-      chunkSizeWarningLimit: 2,
+      minify: true, // 压缩
+      chunkSizeWarningLimit: 2, // 超过 2kb 警告提示
       reportCompressedSize: false,
+      emptyOutDir: false,
       outDir,
       lib: {
         entry,

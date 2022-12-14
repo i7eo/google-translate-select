@@ -1,17 +1,31 @@
 import { resolve } from 'path'
 import React from '@vitejs/plugin-react'
+// import Dts from 'vite-plugin-dts'
 import { PKG_NAME } from '@google-translate-select/constants'
-import type { UserConfigExport } from 'vitest/config'
+import type { UserConfigExport } from 'vite'
 
 export default (): UserConfigExport => {
+  // const packageDir = './src'
   const entry = resolve(__dirname, './src/index.ts')
   const outDir = resolve(__dirname, 'dist/umd')
   return {
     mode: 'production',
-    plugins: [React()],
+    plugins: [
+      React(),
+      // Dts({
+      //   insertTypesEntry: true,
+      //   cleanVueFileName: true,
+      //   skipDiagnostics: false,
+      //   logDiagnostics: true,
+      //   include: [packageDir],
+      //   entryRoot: packageDir,
+      // }),
+    ],
     build: {
-      minify: true,
-      chunkSizeWarningLimit: 2,
+      // target: 'modules',
+      minify: true, // 压缩
+      chunkSizeWarningLimit: 2, // 超过 2kb 警告提示
+      // reportCompressedSize: false,
       emptyOutDir: false,
       outDir,
       lib: {
@@ -23,12 +37,18 @@ export default (): UserConfigExport => {
         },
       },
       rollupOptions: {
-        external: ['react'],
+        external: ['react', 'react-dom'],
+        // output: {
+        //   preserveModules: true,
+        //   preserveModulesRoot: packageDir,
+        //   sourcemap: true,
+        // },
         output: {
           format: 'umd',
           exports: 'named',
           globals: {
             react: 'React',
+            'react-dom': 'ReactDom',
           },
         },
       },

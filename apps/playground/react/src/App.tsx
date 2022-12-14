@@ -1,5 +1,4 @@
 import GoogleTranslateSelect from '@google-translate-select/react'
-import '@google-translate-select/theme-chalk/src/index.scss'
 
 function App() {
   const handleGoogleTranslateSelect = (language: any) => {

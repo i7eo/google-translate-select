@@ -60,6 +60,10 @@
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "dependencies": {
     "@google-translate-select/constants": "workspace:*",
     "@google-translate-select/theme-chalk": "workspace:*",
@@ -71,10 +75,12 @@
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^2.2.0",
+    "@vitejs/plugin-legacy": "3.0.1",
+    "@vitejs/plugin-react": "^3.0.0",
+    "terser": "5.4.0",
     "tsup": "^6.4.0",
     "typescript": "^4.8.4",
-    "vite": "^3.2.3",
+    "vite": "^4.0.1",
     "vite-plugin-dts": "^1.7.0"
   },
   "engines": {
