@@ -8,7 +8,7 @@ import type { UserConfigExport } from 'vite'
 export default (): UserConfigExport => {
   // const packageDir = './src'
   const entry = resolve(__dirname, './src/index.ts')
-  const outDir = resolve(__dirname, 'dist/dist')
+  const outDir = resolve(__dirname, 'dist/umd')
   return {
     mode: 'production',
     plugins: [
