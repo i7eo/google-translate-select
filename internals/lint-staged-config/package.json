@@ -23,7 +23,7 @@
     "lint-staged",
     "lint-staged-config"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/lint-staged-config#readme",
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/internals/lint-staged-config#readme",
   "bugs": {
     "url": "https://github.com/i7eo/v-google-translate/issues"
   },

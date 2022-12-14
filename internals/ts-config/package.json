@@ -23,7 +23,7 @@
     "typescript",
     "ts-config"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/internals/ts-config#readme",
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/internals/ts-config#readme",
   "bugs": {
     "url": "https://github.com/i7eo/v-google-translate/issues"
   },

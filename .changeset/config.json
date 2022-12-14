@@ -9,7 +9,12 @@
   "commit": false,
   "fixed": [],
   "linked": [],
-  "ignore": [],
+  "ignore": [
+    "@google-translate-select/docs",
+    "@google-translate-select/playground-react",
+    "@google-translate-select/playground-vue2",
+    "@google-translate-select/playground-vue3"
+  ],
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",

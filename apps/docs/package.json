@@ -1,6 +1,6 @@
 {
   "name": "@google-translate-select/docs",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "description": "🚀 The package offer docs for @google-translate-select!",
   "keywords": [
@@ -24,7 +24,7 @@
     "vue",
     "docs"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/apps/docs#readme",
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/apps/docs#readme",
   "bugs": {
     "url": "https://github.com/i7eo/v-google-translate/issues"
   },
