@@ -32,9 +32,10 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
     fetchBrowserLanguage = true,
     animateTimeout = 150,
     dropdownClassName = '',
-    className = '',
     dropdownStyles = {},
     showArrow = true,
+    trigger = 'hover',
+    className = '',
     select,
   } = props
 

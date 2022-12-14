@@ -1,6 +1,8 @@
 import { resolve } from 'path'
 import React from '@vitejs/plugin-react'
 import Dts from 'vite-plugin-dts'
+import CssInjected from 'vite-plugin-css-injected-by-js'
+import { PKG_NAME } from '@google-translate-select/constants'
 import type { UserConfigExport } from 'vite'
 
 export default (): UserConfigExport => {
@@ -18,6 +20,9 @@ export default (): UserConfigExport => {
         tsConfigFilePath: '../../tsconfig.web-react.json',
         include: [packageDir],
         entryRoot: packageDir,
+      }),
+      CssInjected({
+        styleId: `${PKG_NAME}-theme-chalk`,
       }),
     ],
     build: {

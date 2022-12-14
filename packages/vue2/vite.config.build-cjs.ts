@@ -1,28 +1,23 @@
 import { resolve } from 'path'
-import Vue from '@vitejs/plugin-vue'
-import VueJsx from '@vitejs/plugin-vue-jsx'
+import { createVuePlugin as Vue } from 'vite-plugin-vue2'
 // import Dts from 'vite-plugin-dts'
 import CssInjected from 'vite-plugin-css-injected-by-js'
-import {
-  PKG_CAMELCASE_NAME,
-  PKG_NAME,
-} from '@google-translate-select/constants'
+import { PKG_NAME } from '@google-translate-select/constants'
 import type { UserConfigExport } from 'vite'
 
 export default (): UserConfigExport => {
-  // const packageDir = './src'
+  const packageDir = './src'
   const entry = resolve(__dirname, './src/index.ts')
-  const outDir = resolve(__dirname, 'dist/umd')
+  const outDir = resolve(__dirname, 'dist/cjs')
   return {
     mode: 'production',
     plugins: [
       Vue(),
-      VueJsx(),
       // Dts({
       //   insertTypesEntry: true,
       //   cleanVueFileName: true,
       //   skipDiagnostics: false,
-      //   logDiagnostics: true,
+      //   tsConfigFilePath: '../../tsconfig.web.json',
       //   include: [packageDir],
       //   entryRoot: packageDir,
       // }),
@@ -31,33 +26,25 @@ export default (): UserConfigExport => {
       }),
     ],
     build: {
-      // target: 'modules',
+      target: 'modules',
       minify: true, // 压缩
       chunkSizeWarningLimit: 2, // 超过 2kb 警告提示
-      // reportCompressedSize: false,
+      reportCompressedSize: false,
       emptyOutDir: false,
       outDir,
       lib: {
-        name: PKG_CAMELCASE_NAME,
         entry,
-        formats: ['umd'],
-        fileName: (target): string => {
-          return `index.${target}.js`
+        formats: ['cjs'],
+        fileName: (): string => {
+          return 'index.cjs'
         },
       },
       rollupOptions: {
         external: ['vue'],
-        // output: {
-        //   preserveModules: true,
-        //   preserveModulesRoot: packageDir,
-        //   sourcemap: true,
-        // },
         output: {
-          format: 'umd',
-          exports: 'named',
-          globals: {
-            vue: 'Vue',
-          },
+          preserveModules: true,
+          preserveModulesRoot: packageDir,
+          sourcemap: true,
         },
       },
     },

@@ -1,6 +1,5 @@
 import { resolve } from 'path'
-import Vue from '@vitejs/plugin-vue'
-import VueJsx from '@vitejs/plugin-vue-jsx'
+import { createVuePlugin as Vue } from 'vite-plugin-vue2'
 // import Dts from 'vite-plugin-dts'
 import CssInjected from 'vite-plugin-css-injected-by-js'
 import {
@@ -17,7 +16,6 @@ export default (): UserConfigExport => {
     mode: 'production',
     plugins: [
       Vue(),
-      VueJsx(),
       // Dts({
       //   insertTypesEntry: true,
       //   cleanVueFileName: true,

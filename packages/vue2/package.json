@@ -1,37 +1,37 @@
 {
-  "name": "@google-translate-select/react",
-  "version": "1.0.0",
-  "description": "🚀 The package offer react library for @google-translate-select!",
+  "name": "@google-translate-select/vue2",
+  "version": "0.0.1",
+  "description": "🚀 The package offer vue2 library for @google-translate-select!",
   "keywords": [
     "google translate select",
     "google translate",
     "google",
     "translate",
-    "react",
-    "react google translate",
-    "react google translate select",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
     "monorepo",
     "pnpm",
     "turborepo",
     "changesets"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/packages/react#readme",
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/packages/vue2#readme",
   "bugs": {
     "url": "https://github.com/i7eo/v-google-translate/issues"
   },
   "license": "MIT",
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
-  "main": "./dist/cjs/index.cjs",
-  "module": "./src/index.ts",
-  "types": "./dist/es/index.d.ts",
+  "main": "./dist/umd/index.umd.js",
+  "module": "./dist/es/index.mjs",
   "exports": {
     ".": {
       "dev": "./src/index.ts",
-      "types": "./dist/es/index.d.ts",
+      "types": "./dist/es/index.mjs.d.ts",
       "require": "./dist/cjs/index.cjs",
       "import": "./dist/es/index.mjs"
     },
-    "./umd": "./dist/umd",
+    "./umd": "./dist/umd/",
     "./es": "./dist/es/index.mjs",
     "./es/*": "./dist/es/*.mjs",
     "./es/*.mjs": "./dist/es/*.mjs",
@@ -46,13 +46,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/i7eo/v-google-translate.git",
-    "directory": "packages/react"
+    "directory": "packages/vue2"
   },
+  "types": "./dist/es/index.d.ts",
   "scripts": {
     "build": "rimraf dist && run-p build:**",
     "build:cjs": "vite build --config ./vite.config.build-cjs.ts",
     "build:es": "vite build --config ./vite.config.build-es.ts",
     "build:umd": "vite build --config ./vite.config.build-umd.ts",
+    "test": "vitest",
     "lint": "run-s lint:**",
     "lint:eslint": "TIMING=1 eslint \"*.{js,jsx,ts,tsx,md,json}\" --fix",
     "lint:prettier": "prettier --write \"*.{js,ts,jsx,tsx,md,json}\"",
@@ -61,28 +63,23 @@
     "clean:deps": "rimraf node_modules"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "vue": "^2.6.11"
   },
   "dependencies": {
     "@google-translate-select/constants": "workspace:*",
     "@google-translate-select/theme-chalk": "workspace:*",
     "@google-translate-select/utils": "workspace:*",
-    "classnames": "2.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "vue": "2.6.11"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-legacy": "3.0.1",
-    "@vitejs/plugin-react": "^3.0.0",
+    "sass": "^1.56.1",
     "terser": "5.4.0",
-    "tsup": "^6.4.0",
     "typescript": "^4.8.4",
     "vite": "^4.0.1",
     "vite-plugin-css-injected-by-js": "2.1.1",
-    "vite-plugin-dts": "^1.7.0"
+    "vite-plugin-dts": "^1.7.0",
+    "vite-plugin-vue2": "^2.0.2",
+    "vue-template-compiler": "2.6.11"
   },
   "engines": {
     "node": ">=16"

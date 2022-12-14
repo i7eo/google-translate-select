@@ -1,7 +1,7 @@
 {
   "name": "google-translate-select-monorepo",
   "private": true,
-  "packageManager": "pnpm@7.15.0",
+  "packageManager": "pnpm@7.18.0",
   "description": "🚀 A modern, high-performance monorepo project designed with Google Translate JS SDK. Vue and react are supported!",
   "keywords": [
     "google translate select",
@@ -37,12 +37,15 @@
     "postinstall": "simple-git-hooks",
     "dev": "turbo run dev --parallel --continue",
     "dev:react": "pnpm run build:react && turbo run dev --filter=playground-react",
+    "dev:vue2": "pnpm run build:vue2 && turbo run dev --filter=playground-vue2",
     "dev:vue3": "pnpm run build:vue3 && turbo run dev --filter=playground-vue3",
     "build": "turbo run build --filter=vue3",
     "build:react": "turbo run build --filter=react",
+    "build:vue2": "turbo run build --filter=vue2",
     "build:vue3": "turbo run build --filter=vue3",
     "test": "turbo run test --filter=vue3",
     "test:react": "turbo run test --filter=react",
+    "test:vue2": "turbo run test --filter=vue2",
     "test:vue3": "turbo run test --filter=vue3",
     "clean": "run-s clean:**",
     "clean:workspace": "turbo run clean",
@@ -99,6 +102,13 @@
       "ignoreMissing": [
         "@algolia/client-search"
       ]
+    },
+    "packageExtensions": {
+      "vue-template-compiler": {
+        "peerDependencies": {
+          "vue": "2.6.11"
+        }
+      }
     }
   }
 }

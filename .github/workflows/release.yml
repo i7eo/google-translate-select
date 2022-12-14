@@ -1,64 +1,64 @@
-name: Release
+# name: Release
 
-env:
-  GITHUB_TOKEN: ${{ secrets.SELF_TOKEN }}
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  GITHUB_BRANCH: ${{ github.ref_name }}
+# env:
+#   GITHUB_TOKEN: ${{ secrets.SELF_TOKEN }}
+#   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#   GITHUB_BRANCH: ${{ github.ref_name }}
 
-on:
-  push:
-    branches:
-      - next
+# on:
+#   push:
+#     branches:
+#       - master
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+# concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+# jobs:
+#   release:
+#     name: Release
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
+#       - name: Setup pnpm
+#         uses: pnpm/action-setup@v2
+#         with:
+#           version: 7
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: pnpm
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 16
+#           cache: pnpm
 
-      - name: Install Dependencies
-        run: pnpm install
+#       - name: Install Dependencies
+#         run: pnpm install
 
-      - name: Build Packages
-        run: pnpm build
+#       - name: Build Packages
+#         run: pnpm build
 
-      - name: Fetch Github User Email
-        run: git config --global user.email $(git log -n 1 --pretty=format:%ae)
+#       - name: Fetch Github User Email
+#         run: git config --global user.email $(git log -n 1 --pretty=format:%ae)
 
-      - name: Fetch Github User Name
-        run: git config --global user.name $(git log -n 1 --pretty=format:%an)
+#       - name: Fetch Github User Name
+#         run: git config --global user.name $(git log -n 1 --pretty=format:%an)
 
-      - name: Generate changelogrc
-        run: pnpm changelog:gen
+#       - name: Generate changelogrc
+#         run: pnpm changelog:gen
 
-      - name: Bump version
-        run: pnpm changeset version
+#       - name: Bump version
+#         run: pnpm changeset version
 
-      - name: Publish packages and create releases
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          pnpm changeset:publish
+#       - name: Publish packages and create releases
+#         run: |
+#           npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+#           pnpm changeset:publish
 
-      - name: Generate changelog files
-        run: pnpm changelog:write
+#       - name: Generate changelog files
+#         run: pnpm changelog:write
 
-      - name: Commit changelog files
-        run: |
-          git add . && git diff --staged --quiet || git commit -am "docs: 📝 update changelog on repository" && git push origin $GITHUB_BRANCH
+#       - name: Commit changelog files
+#         run: |
+#           git add . && git diff --staged --quiet || git commit -am "docs: 📝 update changelog on repository" && git push origin $GITHUB_BRANCH

@@ -15,6 +15,7 @@ export interface IGoogleTranslateProps {
   dropdownClassName?: string
   dropdownStyles?: CSSProperties
   showArrow?: boolean
+  trigger?: 'hover' | 'string'
   className?: string
   select?: Function
 }

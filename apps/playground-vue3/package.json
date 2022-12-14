@@ -1,6 +1,6 @@
 {
   "name": "@google-translate-select/playground-vue3",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "description": "🚀 The package offer vue3 playground for @google-translate-select!",
   "keywords": [
@@ -38,19 +38,17 @@
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules",
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google-translate-select/theme-chalk": "workspace:*",
     "@google-translate-select/vue3": "workspace:*",
     "vue": "^3.2.41"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "typescript": "^4.8.4",
-    "vite": "^4.0.1",
-    "vue-tsc": "^1.0.9"
+    "vite": "^4.0.1"
   },
   "engines": {
     "node": ">=16"
