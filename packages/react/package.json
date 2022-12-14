@@ -21,18 +21,27 @@
   },
   "license": "MIT",
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./src/index.ts",
+  "types": "./dist/es/index.d.ts",
   "exports": {
     ".": {
       "dev": "./src/index.ts",
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "types": "./dist/es/index.d.ts",
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/es/index.mjs"
     },
-    "./*": "./*"
+    "./umd": "./dist/umd",
+    "./es": "./dist/es/index.mjs",
+    "./es/*": "./dist/es/*.mjs",
+    "./es/*.mjs": "./dist/es/*.mjs",
+    "./cjs": "./dist/cjs/index.cjs",
+    "./cjs/*": "./dist/cjs/*.js",
+    "./cjs/*.cjs": "./dist/cjs/*.cjs",
+    "./*": "./dist/*"
   },
+  "unpkg": "./dist/umd/index.umd.js",
+  "jsdelivr": "./dist/umd/index.umd.js",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -40,7 +49,10 @@
     "directory": "packages/react"
   },
   "scripts": {
-    "build": "rimraf dist && tsup ./src/index.ts --format esm,cjs --dts",
+    "build": "rimraf dist && run-p build:**",
+    "build:cjs": "vite build --config ./vite.config.build-cjs.ts",
+    "build:es": "vite build --config ./vite.config.build-es.ts",
+    "build:umd": "vite build --config ./vite.config.build-umd.ts",
     "lint": "run-s lint:**",
     "lint:eslint": "TIMING=1 eslint \"*.{js,jsx,ts,tsx,md,json}\" --fix",
     "lint:prettier": "prettier --write \"*.{js,ts,jsx,tsx,md,json}\"",
@@ -48,9 +60,22 @@
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"
   },
+  "dependencies": {
+    "@google-translate-select/constants": "workspace:*",
+    "@google-translate-select/theme-chalk": "workspace:*",
+    "@google-translate-select/utils": "workspace:*",
+    "classnames": "2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
     "tsup": "^6.4.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "vite": "^3.2.3",
+    "vite-plugin-dts": "^1.7.0"
   },
   "engines": {
     "node": ">=16"
