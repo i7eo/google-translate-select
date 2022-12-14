@@ -10,6 +10,33 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 ## 14-12-2022
 
+**@google-translate-select/vue3** `v0.0.3`
+
+- ⚒️ update homepage url
+
+**@google-translate-select/vue2** `v0.0.3`
+
+- ⚒️ update homepage url
+
+**@google-translate-select/utils** `v0.0.3`
+
+- ⚒️ update homepage url
+
+**@google-translate-select/theme-chalk** `v0.0.3`
+
+- ⚒️ update homepage url
+
+**@google-translate-select/react** `v0.0.3`
+
+- ⚒️ update homepage url
+
+**@google-translate-select/constants** `v0.0.3`
+
+- ⚒️ update homepage url
+
+
+## 14-12-2022
+
 **@google-translate-select/vue2** `v0.0.2`
 
 - 🔨 Migrate vue2 project to monorepo
