@@ -1,0 +1,67 @@
+{
+  "name": "@google-translate-select/docs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "🚀 The package offer docs for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "vite",
+    "vue",
+    "docs"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/apps/docs#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "apps/docs"
+  },
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "NODE_ENV=production && vitepress build .",
+    "serve": "NODE_ENV=production vitepress serve . --port 5001"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.41"
+  },
+  "dependencies": {
+    "@docsearch/js": "3.3.0",
+    "@google-translate-select/constants": "workspace:*",
+    "@google-translate-select/theme-chalk": "workspace:*",
+    "@google-translate-select/utils": "workspace:*",
+    "clipboard-copy": "4.0.1",
+    "markdown-it": "13.0.1",
+    "normalize.css": "8.0.1",
+    "nprogress": "0.2.0",
+    "prism-theme-vars": "0.2.4",
+    "vue": "^3.2.41"
+  },
+  "devDependencies": {
+    "@docsearch/react": "3.3.0",
+    "@types/markdown-it": "12.2.3",
+    "markdown-it-container": "3.0.0",
+    "vitepress": "1.0.0-alpha.29"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "@google-translate-select/vue2",
+  "version": "0.0.1",
+  "description": "🚀 The package offer vue2 library for @google-translate-select!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate/blob/next/packages/vue2#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "main": "./dist/umd/index.umd.js",
+  "module": "./dist/es/index.mjs",
+  "exports": {
+    ".": {
+      "dev": "./src/index.ts",
+      "types": "./dist/es/index.mjs.d.ts",
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/es/index.mjs"
+    },
+    "./umd": "./dist/umd/",
+    "./es": "./dist/es/index.mjs",
+    "./es/*": "./dist/es/*.mjs",
+    "./es/*.mjs": "./dist/es/*.mjs",
+    "./cjs": "./dist/cjs/index.cjs",
+    "./cjs/*": "./dist/cjs/*.js",
+    "./cjs/*.cjs": "./dist/cjs/*.cjs",
+    "./*": "./dist/*"
+  },
+  "unpkg": "./dist/umd/index.umd.js",
+  "jsdelivr": "./dist/umd/index.umd.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git",
+    "directory": "packages/vue2"
+  },
+  "types": "./dist/es/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && run-p build:**",
+    "build:cjs": "vite build --config ./vite.config.build-cjs.ts",
+    "build:es": "vite build --config ./vite.config.build-es.ts",
+    "build:umd": "vite build --config ./vite.config.build-umd.ts",
+    "test": "vitest",
+    "lint": "run-s lint:**",
+    "lint:eslint": "TIMING=1 eslint \"*.{js,jsx,ts,tsx,md,json}\" --fix",
+    "lint:prettier": "prettier --write \"*.{js,ts,jsx,tsx,md,json}\"",
+    "clean": "run-p clean:**",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11"
+  },
+  "dependencies": {
+    "@google-translate-select/constants": "workspace:*",
+    "@google-translate-select/theme-chalk": "workspace:*",
+    "@google-translate-select/utils": "workspace:*",
+    "vue": "2.6.11"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1",
+    "terser": "5.4.0",
+    "typescript": "^4.8.4",
+    "vite": "^4.0.1",
+    "vite-plugin-css-injected-by-js": "2.1.1",
+    "vite-plugin-dts": "^1.7.0",
+    "vite-plugin-vue2": "^2.0.2",
+    "vue-template-compiler": "2.6.11"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

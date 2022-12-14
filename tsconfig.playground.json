@@ -1,0 +1,19 @@
+{
+  "extends": "@google-translate-select/ts-config/web.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/package.json",
+    "apps/playground-react/*/main.ts",
+    "apps/playground-react/*/main.ts",
+    "apps/playground-react/*/env.d.ts",
+    "apps/playground-vue2/*/main.ts",
+    "apps/playground-vue2/*/main.ts",
+    "apps/playground-vue2/*/env.d.ts",
+    "apps/playground-vue3/*/main.ts",
+    "apps/playground-vue3/*/main.ts",
+    "apps/playground-vue3/*/env.d.ts",
+  ]
+}

@@ -1,0 +1,33 @@
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.turbo
+.eslintcache
+.shadowenv.d
+.cache
+
+# Package Manager
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Logs
+logs
+*.log
+
+# Bundle
+dist
+# coverage
+
+# local env files
+*.local
+# .eslintcache
+tmp

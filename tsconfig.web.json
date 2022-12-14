@@ -1,0 +1,19 @@
+{
+  "extends": "@google-translate-select/ts-config/web.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/package.json",
+    "packages/*/typings/**/*",
+    "typings/env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/dist",
+    "**/__tests__/**",
+    "**/tests/**",
+    "**/*.md"
+  ]
+}

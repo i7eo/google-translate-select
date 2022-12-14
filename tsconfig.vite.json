@@ -1,0 +1,13 @@
+{
+  "extends": "@google-translate-select/ts-config/vite.json",
+  "compilerOptions": {
+    "composite": true
+  },
+  "include": [
+    "**/vite.config.*",
+    "packages/constants/src/**/*",
+    "packages/constants/package.json",
+    "packages/*/typings/**/*",
+    "typings/env.d.ts"
+  ]
+}

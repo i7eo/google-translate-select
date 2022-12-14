@@ -1,0 +1,98 @@
+@use '../../constants/namespace.scss' as *;
+@use '../helper/functions.scss' as *;
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin pseudo($pseudo) {
+  @at-root #{&}#{':#{$pseudo}'} {
+    @content;
+  }
+}
+
+// dark
+@mixin dark($block) {
+  html.dark {
+    @include b($block) {
+      @content;
+    }
+  }
+}
+
+@mixin scroll-bar {
+  $scrollbar-thumb-background: getCssVar('text-color', 'disabled');
+  $scrollbar-track-background: getCssVar('fill-color', 'blank');
+
+  &::-webkit-scrollbar {
+    // z-index: 11;
+    width: 6px;
+
+    // &:horizontal {
+    //   height: 6px;
+    // }
+
+    &-thumb {
+      width: 6px;
+      background: $scrollbar-thumb-background;
+      border-radius: getCssVar('border-radius', 'base');
+    }
+
+    &-corner {
+      background: $scrollbar-track-background;
+    }
+
+    &-track {
+      background: $scrollbar-track-background;
+
+      &-piece {
+        width: 6px;
+        background: $scrollbar-track-background;
+      }
+    }
+  }
+}
+
+@mixin util-clearfix {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::before,
+    #{$selector}::after {
+      display: table;
+      content: '';
+    }
+    #{$selector}::after {
+      clear: both;
+    }
+  }
+}
+
+@mixin util-vertical-center {
+  $selector: &;
+
+  @at-root {
+    #{$selector}::after {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      content: '';
+    }
+  }
+}
+
+@mixin util-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin util-inline-flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

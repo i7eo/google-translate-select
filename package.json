@@ -1,0 +1,114 @@
+{
+  "name": "google-translate-select-monorepo",
+  "private": true,
+  "packageManager": "pnpm@7.18.0",
+  "description": "🚀 A modern, high-performance monorepo project designed with Google Translate JS SDK. Vue and react are supported!",
+  "keywords": [
+    "google translate select",
+    "google translate",
+    "google",
+    "translate",
+    "Vue3",
+    "Vue2",
+    "Vue",
+    "vue google translate",
+    "vue google translate select",
+    "react",
+    "react google translate",
+    "react google translate select",
+    "monorepo",
+    "pnpm",
+    "turborepo",
+    "changesets",
+    "vitest"
+  ],
+  "homepage": "https://github.com/i7eo/v-google-translate#readme",
+  "bugs": {
+    "url": "https://github.com/i7eo/v-google-translate/issues"
+  },
+  "license": "MIT",
+  "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/i7eo/v-google-translate.git"
+  },
+  "scripts": {
+    "preinstall": "node ./scripts/preinstall.mjs",
+    "postinstall": "simple-git-hooks",
+    "dev": "turbo run dev --parallel --continue",
+    "dev:react": "pnpm run build:react && turbo run dev --filter=playground-react",
+    "dev:vue2": "pnpm run build:vue2 && turbo run dev --filter=playground-vue2",
+    "dev:vue3": "pnpm run build:vue3 && turbo run dev --filter=playground-vue3",
+    "build": "turbo run build --filter=vue3",
+    "build:react": "turbo run build --filter=react",
+    "build:vue2": "turbo run build --filter=vue2",
+    "build:vue3": "turbo run build --filter=vue3",
+    "test": "turbo run test --filter=vue3",
+    "test:react": "turbo run test --filter=react",
+    "test:vue2": "turbo run test --filter=vue2",
+    "test:vue3": "turbo run test --filter=vue3",
+    "clean": "run-s clean:**",
+    "clean:workspace": "turbo run clean",
+    "clean:cache": "turbo run clean:cache",
+    "clean:root-cache": "rimraf .turbo && rimraf pnpm-lock.yaml && rimraf node_modules",
+    "lint": "turbo run lint",
+    "format": "turbo run lint:prettier",
+    "commit": "czg",
+    "prerelease": "tsx ./scripts/prerelease.ts",
+    "changelog:gen": "tsx ./scripts/changesets/generate.ts",
+    "changelog:write": "tsx ./scripts/changesets/write.ts",
+    "changeset:publish": "tsx ./scripts/changesets/releases.ts",
+    "changeset:gen": "changeset"
+  },
+  "devDependencies": {
+    "@changesets/assemble-release-plan": "5.2.2",
+    "@changesets/changelog-github": "0.4.7",
+    "@changesets/cli": "^2.25.2",
+    "@changesets/config": "2.2.0",
+    "@changesets/pre": "1.0.13",
+    "@changesets/read": "0.5.8",
+    "@changesets/types": "5.2.0",
+    "@google-translate-select/commitlint-config": "workspace:*",
+    "@google-translate-select/constants": "workspace:*",
+    "@google-translate-select/eslint-config": "workspace:*",
+    "@google-translate-select/lint-staged-config": "workspace:*",
+    "@google-translate-select/prettier-config": "workspace:*",
+    "@google-translate-select/simple-git-hooks-config": "workspace:*",
+    "@google-translate-select/stylelint-config": "workspace:*",
+    "@google-translate-select/ts-config": "workspace:*",
+    "@manypkg/get-packages": "1.1.3",
+    "@types/inquirer": "9.0.2",
+    "@types/jsdom": "20.0.1",
+    "@types/node": "*",
+    "@types/prettier": "2.7.1",
+    "@types/semver": "7.3.13",
+    "@vitest/ui": "^0.25.1",
+    "inquirer": "^9.1.4",
+    "jsdom": "^20.0.2",
+    "npm-run-all": "^4.1.5",
+    "octokit": "^2.0.10",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.8",
+    "tsx": "^3.11.0",
+    "turbo": "^1.6.3",
+    "typescript": "^4.8.4",
+    "vitest": "^0.25.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    },
+    "packageExtensions": {
+      "vue-template-compiler": {
+        "peerDependencies": {
+          "vue": "2.6.11"
+        }
+      }
+    }
+  }
+}
