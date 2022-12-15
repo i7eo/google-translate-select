@@ -1,6 +1,6 @@
 <h1>@google-translate-select</h1>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml)
@@ -91,6 +91,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center"><a href="https://github.com/MiracleH"><img src="https://avatars.githubusercontent.com/u/22657524?v=4?s=100" width="100px;" alt="hyj"/><br /><sub><b>hyj</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=MiracleH" title="Code">💻</a></td>
+      <td align="center"><a href="https://yesux.github.io/"><img src="https://avatars.githubusercontent.com/u/44074974?v=4?s=100" width="100px;" alt="suxiong"/><br /><sub><b>suxiong</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=YeSuX" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
