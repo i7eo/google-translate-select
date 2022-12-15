@@ -1,11 +1,7 @@
 * text=auto eol=lf
-*.js linguist-detectable=ts
-*.mjs linguist-detectable=ts
-*.ts linguist-detectable=true
-*.tsx linguist-detectable=ts
-*.md linguist-detectable=ts
-*.json linguist-detectable=ts
+*.css linguist-detectable=false
+*.scss linguist-detectable=false
+*.less linguist-detectable=false
+*.ts linguist-detectable=false
+*.js linguist-detectable=true
 *.vue linguist-detectable=true
-*.css linguist-detectable=scss
-*.scss linguist-detectable=true
-*.less linguist-detectable=true
