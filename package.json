@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/i7eo/v-google-translate.git"
+    "url": "git+https://github.com/i7eo/google-translate-select.git"
   },
   "keywords": [
     "Vue2.x",
@@ -73,7 +73,7 @@
   "author": "i7eo <george704t@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/i7eo/v-google-translate/issues"
+    "url": "https://github.com/i7eo/google-translate-select/issues"
   },
-  "homepage": "https://github.com/i7eo/v-google-translate#readme"
+  "homepage": "https://github.com/i7eo/google-translate-select#readme"
 }
