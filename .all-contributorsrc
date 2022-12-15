@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "YeSuX",
+      "name": "suxiong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44074974?v=4",
+      "profile": "https://yesux.github.io/",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "google-translate-select",
+  "projectOwner": "i7eo"
+}
