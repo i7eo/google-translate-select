@@ -1,7 +1,4 @@
 <h1>@google-translate-select</h1>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml)
 [![All Contributors](https://img.shields.io/github/all-contributors/i7eo/google-translate-select/master)](#contributors-)
@@ -18,8 +15,8 @@
 - [Origin](#origin)
 - [Inspire](#inspire)
 - [Development](#development)
-  - [Vitepress for @google-translate-select](#vitepress-for-@google-translate-select)
-  - [Playground for @google-translate-select](#playground-for-@google-translate-select)
+  - [Vitepress for @google-translate-select](#vitepress-for-google-translate-select)
+  - [Playground for @google-translate-select](#playground-for-google-translate-select)
 - [Commits & releases](#commits--releases)
 - [Get involved](#get-involved)
 - [Reach out to us](#reach-out-to-us)
@@ -34,7 +31,7 @@ The previous `google-translate-select` package move to repo `backup/master`, if 
 
 I refactor previous `google-translate-select` package using `typescript` and renamed it `@google-translate-select/vue2`, if you want to check it, click [here](https://github.com/i7eo/google-translate-select/tree/master/packages/vue2).
 
-## Orign
+## Origin
 
 This package enables localization of web apps made with vue by use of google translate.As your website and app grows, you may find a need to expand to other markets outside your home country.
 
