@@ -19,15 +19,15 @@
     "vite",
     "playground"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/apps/playground#readme",
+  "homepage": "https://github.com/i7eo/google-translate-select/blob/master/apps/playground#readme",
   "bugs": {
-    "url": "https://github.com/i7eo/v-google-translate/issues"
+    "url": "https://github.com/i7eo/google-translate-select/issues"
   },
   "license": "MIT",
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/i7eo/v-google-translate.git",
+    "url": "https://github.com/i7eo/google-translate-select.git",
     "directory": "apps/playground/react"
   },
   "scripts": {

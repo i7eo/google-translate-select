@@ -1,4 +1,4 @@
-# v-google-translate
+# @google-translate-select/vue2
 
 🚀 The package offer vue2 library for @google-translate-select!
 

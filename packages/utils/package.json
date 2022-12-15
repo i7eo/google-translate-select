@@ -21,9 +21,9 @@
     "changesets",
     "utils"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/packages/utils#readme",
+  "homepage": "https://github.com/i7eo/google-translate-select/blob/master/packages/utils#readme",
   "bugs": {
-    "url": "https://github.com/i7eo/v-google-translate/issues"
+    "url": "https://github.com/i7eo/google-translate-select/issues"
   },
   "license": "MIT",
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
@@ -42,7 +42,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/i7eo/v-google-translate.git",
+    "url": "https://github.com/i7eo/google-translate-select.git",
     "directory": "packages/utils"
   },
   "scripts": {
