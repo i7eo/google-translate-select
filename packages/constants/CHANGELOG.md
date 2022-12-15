@@ -1,5 +1,11 @@
 # @google-translate-select/constants
 
+## 0.0.4
+
+### Patch Changes
+
+- [`31dcf60`](https://github.com/i7eo/google-translate-select/commit/31dcf60e8b6a650837469e2a62280afffb991763) Thanks [@i7eo](https://github.com/i7eo)! - 🚀 rename github repository and feat detail
+
 ## 0.0.3
 
 ### Patch Changes

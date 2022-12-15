@@ -1,5 +1,16 @@
 # @google-translate-select/vue2
 
+## 0.0.4
+
+### Patch Changes
+
+- [`31dcf60`](https://github.com/i7eo/google-translate-select/commit/31dcf60e8b6a650837469e2a62280afffb991763) Thanks [@i7eo](https://github.com/i7eo)! - 🚀 rename github repository and feat detail
+
+- Updated dependencies [[`31dcf60`](https://github.com/i7eo/google-translate-select/commit/31dcf60e8b6a650837469e2a62280afffb991763)]:
+  - @google-translate-select/constants@0.0.4
+  - @google-translate-select/theme-chalk@0.0.4
+  - @google-translate-select/utils@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
