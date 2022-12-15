@@ -2,6 +2,7 @@
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
 *.less linguist-detectable=false
-*.ts linguist-detectable=false
-*.js linguist-detectable=true
+*.ts linguist-detectable=true
+*.tsx linguist-detectable=ts
+*.js linguist-detectable=ts
 *.vue linguist-detectable=true
