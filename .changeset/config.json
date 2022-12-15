@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "i7eo/v-google-translate"
+      "repo": "i7eo/google-translate-select"
     }
   ],
   "commit": false,

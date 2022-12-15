@@ -22,9 +22,9 @@
     "changesets",
     "theme-chalk"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/packages/theme-chalk#readme",
+  "homepage": "https://github.com/i7eo/google-translate-select/blob/master/packages/theme-chalk#readme",
   "bugs": {
-    "url": "https://github.com/i7eo/v-google-translate/issues"
+    "url": "https://github.com/i7eo/google-translate-select/issues"
   },
   "license": "MIT",
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
@@ -34,7 +34,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/i7eo/v-google-translate.git",
+    "url": "https://github.com/i7eo/google-translate-select.git",
     "directory": "packages/theme-chalk"
   },
   "scripts": {

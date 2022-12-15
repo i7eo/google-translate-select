@@ -23,16 +23,16 @@
     "lint-staged",
     "lint-staged-config"
   ],
-  "homepage": "https://github.com/i7eo/v-google-translate/blob/master/internals/lint-staged-config#readme",
+  "homepage": "https://github.com/i7eo/google-translate-select/blob/master/internals/lint-staged-config#readme",
   "bugs": {
-    "url": "https://github.com/i7eo/v-google-translate/issues"
+    "url": "https://github.com/i7eo/google-translate-select/issues"
   },
   "license": "MIT",
   "author": "i7eo <admin@i7eo.com> (https://github.com/i7eo)",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/i7eo/v-google-translate.git",
+    "url": "https://github.com/i7eo/google-translate-select.git",
     "directory": "internals/lint-staged-config"
   },
   "scripts": {
