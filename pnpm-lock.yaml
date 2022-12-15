@@ -22,7 +22,7 @@ importers:
       '@google-translate-select/stylelint-config': workspace:*
       '@google-translate-select/ts-config': workspace:*
       '@manypkg/get-packages': 1.1.3
-      '@types/inquirer': 9.0.2
+      '@types/inquirer': 9.0.3
       '@types/jsdom': 20.0.1
       '@types/node': '*'
       '@types/prettier': 2.7.1
@@ -55,7 +55,7 @@ importers:
       '@google-translate-select/stylelint-config': link:internals/stylelint-config
       '@google-translate-select/ts-config': link:internals/ts-config
       '@manypkg/get-packages': 1.1.3
-      '@types/inquirer': 9.0.2
+      '@types/inquirer': 9.0.3
       '@types/jsdom': 20.0.1
       '@types/node': 18.11.15
       '@types/prettier': 2.7.1
@@ -2360,8 +2360,8 @@ packages:
       chokidar: 3.5.3
     dev: true
 
-  /@types/inquirer/9.0.2:
-    resolution: {integrity: sha512-MQc3adiIh/rDxLkjnvL03rSvuHg+/dKif4dn/MRsnE+oU1bAdyuDbW0w+ewR1M/M/u/Z0YAbw7NZYCpgQ5SW8A==}
+  /@types/inquirer/9.0.3:
+    resolution: {integrity: sha512-CzNkWqQftcmk2jaCWdBTf9Sm7xSw4rkI1zpU/Udw3HX5//adEZUIm9STtoRP1qgWj0CWQtJ9UTvqmO2NNjhMJw==}
     dependencies:
       '@types/through': 0.0.30
       rxjs: 7.6.0

@@ -1,6 +1,6 @@
 {
   "name": "@google-translate-select/theme-chalk",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "🚀 The package offer theme-chalk for @google-translate-select!",
   "type": "module",
   "keywords": [
