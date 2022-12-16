@@ -6,4 +6,6 @@ page: true
 
 <!-- Placeholder -->
 
-## Welcome to @google-translate-select/docs
+# Welcome to @google-translate-select/docs
+
+## Setup Vercel auto depoly and domain "https://google-translate-select.i7eo.com" 🎉
