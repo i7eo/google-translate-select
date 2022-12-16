@@ -3,7 +3,7 @@
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml)
 [![All Contributors](https://img.shields.io/github/all-contributors/i7eo/google-translate-select/master)](#contributors-)
 
-[@google-translate-select](https://i7eo.com/) is an open-source project to invoke google translate jssdk to translate your dispaly content, we support vue2/vue3/react as follows:
+[@google-translate-select](https://google-translate-select.i7eo.com) is an open-source project to invoke google translate jssdk to translate your dispaly content, we support vue2/vue3/react as follows:
 
 [![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/i7eo/google-translate-select?filename=packages%2Freact%2Fpackage.json&label=@google-translate-select%2Freact)](https://github.com/i7eo/google-translate-select/tree/master/packages/react)
 [![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/i7eo/google-translate-select?filename=packages%2Fvue2%2Fpackage.json&label=@google-translate-select%2Fvue2)](https://github.com/i7eo/google-translate-select/tree/master/packages/vue2)
