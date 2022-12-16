@@ -51,7 +51,7 @@ For local development, in the root of the repo run `pnpm i` to install all depen
 
 ### Vitepress for @google-translate-select
 
-We use vitepress with our library to develop document. You can start it from the root of the repo, just run `pnpm docs`
+We use vitepress with our library to develop document. You can start it from the root of the repo, just run `pnpm dev:docs`
 
 ### Playground for @google-translate-select
 
