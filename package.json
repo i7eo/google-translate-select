@@ -63,7 +63,7 @@
     "changeset:gen": "changeset"
   },
   "devDependencies": {
-    "@changesets/assemble-release-plan": "5.2.2",
+    "@changesets/assemble-release-plan": "5.2.3",
     "@changesets/changelog-github": "0.4.7",
     "@changesets/cli": "^2.25.2",
     "@changesets/config": "2.2.0",
