@@ -68,7 +68,7 @@
     "@changesets/cli": "^2.25.2",
     "@changesets/config": "2.3.0",
     "@changesets/pre": "1.0.13",
-    "@changesets/read": "0.5.8",
+    "@changesets/read": "0.5.9",
     "@changesets/types": "5.2.0",
     "@google-translate-select/commitlint-config": "workspace:*",
     "@google-translate-select/constants": "workspace:*",
