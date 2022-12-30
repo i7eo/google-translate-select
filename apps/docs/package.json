@@ -44,22 +44,26 @@
     "vue": "^3.2.41"
   },
   "dependencies": {
-    "@docsearch/js": "3.3.0",
+    "@docsearch/css": "^3.3.1",
+    "@docsearch/js": "^3.3.1",
     "@google-translate-select/constants": "workspace:*",
     "@google-translate-select/theme-chalk": "workspace:*",
     "@google-translate-select/utils": "workspace:*",
-    "clipboard-copy": "4.0.1",
-    "markdown-it": "13.0.1",
-    "normalize.css": "8.0.1",
-    "nprogress": "0.2.0",
-    "prism-theme-vars": "0.2.4",
+    "clipboard-copy": "^4.0.1",
+    "markdown-it": "^13.0.1",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "prism-theme-vars": "^0.2.4",
     "vue": "^3.2.41"
   },
   "devDependencies": {
-    "@docsearch/react": "3.3.0",
-    "@types/markdown-it": "12.2.3",
-    "markdown-it-container": "3.0.0",
-    "vitepress": "1.0.0-alpha.29"
+    "@docsearch/react": "^3.3.0",
+    "@types/markdown-it": "^12.2.3",
+    "@types/nprogress": "^0.2.0",
+    "chalk": "^4.1.2",
+    "consola": "^2.15.3",
+    "markdown-it-container": "^3.0.0",
+    "vitepress": "^1.0.0-alpha.33"
   },
   "engines": {
     "node": ">=16"
