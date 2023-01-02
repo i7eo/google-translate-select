@@ -318,7 +318,7 @@ importers:
       clean-css: ^5.3.1
       consola: ^2.15.3
       esbuild: 0.15.13
-      esbuild-plugin-copy: 1.6.0
+      esbuild-plugin-copy: 2.0.1
       esbuild-sass-plugin: ^2.4.0
       postcss: ^8.4.19
       postcss-preset-env: ^7.8.2
@@ -333,7 +333,7 @@ importers:
       clean-css: 5.3.1
       consola: 2.15.3
       esbuild: 0.15.13
-      esbuild-plugin-copy: 1.6.0_esbuild@0.15.13
+      esbuild-plugin-copy: 2.0.1_esbuild@0.15.13
       esbuild-sass-plugin: 2.4.4
       postcss: 8.4.20
       postcss-preset-env: 7.8.3_postcss@8.4.20
@@ -4733,8 +4733,8 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-plugin-copy/1.6.0_esbuild@0.15.13:
-    resolution: {integrity: sha512-wN1paBCoE0yRBl9ZY3ZSD6SxGE4Yfr0Em7zh2yTbJv1JaHEIR3FYYN7HU6F+j/peSaGZJNSORSGxJ5QX1a1Sgg==}
+  /esbuild-plugin-copy/2.0.1_esbuild@0.15.13:
+    resolution: {integrity: sha512-/mvriqGv2QAyrkui3REZaLEjwqESBKWZQQJtOZEausI8C4QMChREXGASNzmWpTlHo/v+ipLW73QCiNemBKggMw==}
     peerDependencies:
       esbuild: '>= 0.14.0'
     dependencies:
