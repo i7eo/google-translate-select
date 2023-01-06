@@ -8,7 +8,7 @@ export default {
   lang: 'en-US',
   title: PKG_CAMELCASE_SPACE_NAME,
   description:
-    'A modern, high-performance monorepo project designed with Google Translate JS SDK. Vue and react are supported!s',
+    '🚀 A modern, high-performance monorepo project designed with Google Translate JS SDK. Vue and react are supported!s',
   lastUpdated: true,
   markdown: {
     // theme: 'material-palenight',
