@@ -26,6 +26,7 @@ logs
 # Bundle
 dist
 # coverage
+apps/docs/.vitepress/cache
 
 # local env files
 *.local
