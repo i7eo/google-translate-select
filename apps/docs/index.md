@@ -12,13 +12,7 @@ const handleGoogleTranslateSelect = (language) => {
 }
 </script>
 
-# @google-translate-select
-
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml)
-
-[![All Contributors](https://img.shields.io/github/all-contributors/i7eo/google-translate-select/master)](#contributors-)
-
-## What is @google-translate-select
+# What is `@google-translate-select`
 
 [@google-translate-select](https://google-translate-select.i7eo.com) is an open-source project to invoke google translate jssdk to translate your dispaly content, we support vue2/vue3/react as follows:
 
@@ -149,7 +143,8 @@ We appreciate any help on our repositories. For more details about how to contri
 
 ## Reach out to us
 
-Create an issue using one of the templates [![File an issue](https://img.shields.io/badge/-Create%20Issue-6cc644.svg?logo=github&maxAge=31557600)](https://github.com/i7eo/google-translate-select/issues/new/choose).
+Create an issue using one of the templates [![File an issue](https://img.shields.io/badge/-Create%20Issue-6cc644.svg?logo=github&maxAge=31557600)](https://github.com/i7eo/google-translate-select/issues/new/choose)
+
 Make sure to remove any credential from your code before sharing it.
 
 ## Contributors

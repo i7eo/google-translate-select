@@ -43,6 +43,7 @@
   "dependencies": {
     "@commitlint/cli": "17.2.0",
     "@commitlint/config-conventional": "17.2.0",
+    "@types/node": "*",
     "czg": "^1.3.12"
   },
   "engines": {
