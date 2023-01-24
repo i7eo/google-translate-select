@@ -12,6 +12,7 @@ function App() {
         defaultPageLanguageCode="zh-CN"
         fetchBrowserLanguage={false}
         select={handleGoogleTranslateSelect}
+        trigger="click"
         className="demo"
       />
       <div className="test">
