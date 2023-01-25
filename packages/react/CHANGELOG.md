@@ -1,5 +1,11 @@
 # @google-translate-select/react
 
+## 0.0.5
+
+### Patch Changes
+
+- [`02adf2c`](https://github.com/i7eo/google-translate-select/commit/02adf2c809932547d2912012a2f6d8293dd4ceea) Thanks [@i7eo](https://github.com/i7eo)! - add prop `trigger` control select
+
 ## 0.0.4
 
 ### Patch Changes
