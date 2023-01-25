@@ -8,6 +8,37 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 25-01-2023
+
+**@google-translate-select/react** `v0.0.5`
+
+- add prop `trigger` control select
+
+**@google-translate-select/vue3** `v0.1.0`
+
+- setup version v0.1.0
+
+**@google-translate-select/vue2** `v0.1.0`
+
+- setup version v0.1.0
+
+**@google-translate-select/utils** `v0.1.0`
+
+- setup version v0.1.0
+
+**@google-translate-select/theme-chalk** `v0.1.0`
+
+- setup version v0.1.0
+
+**@google-translate-select/react** `v0.1.0`
+
+- setup version v0.1.0
+
+**@google-translate-select/constants** `v0.1.0`
+
+- setup version v0.1.0
+
+
 ## 15-12-2022
 
 **@google-translate-select/vue3** `v0.0.4`
