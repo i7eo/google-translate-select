@@ -1,5 +1,16 @@
 # @google-translate-select/utils
 
+## 0.1.0
+
+### Minor Changes
+
+- [`03eafbe`](https://github.com/i7eo/google-translate-select/commit/03eafbe9f2302f2b8e1c241776540badafdffa16) Thanks [@i7eo](https://github.com/i7eo)! - setup version v0.1.0
+
+### Patch Changes
+
+- Updated dependencies [[`03eafbe`](https://github.com/i7eo/google-translate-select/commit/03eafbe9f2302f2b8e1c241776540badafdffa16)]:
+  - @google-translate-select/constants@0.1.0
+
 ## 0.0.4
 
 ### Patch Changes
