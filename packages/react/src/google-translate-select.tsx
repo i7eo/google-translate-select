@@ -258,21 +258,25 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
   }
 
   const handleDropdownShow = () => {
-    clearTimeout(timeoutId)
-    setTimeoutId(
-      window.setTimeout(() => {
-        setVisible(true)
-      }, animateTimeout)
-    )
+    if (trigger === 'hover') {
+      clearTimeout(timeoutId)
+      setTimeoutId(
+        window.setTimeout(() => {
+          setVisible(true)
+        }, animateTimeout)
+      )
+    }
   }
 
   const handleDropdownHide = () => {
-    clearTimeout(timeoutId)
-    setTimeoutId(
-      window.setTimeout(() => {
-        setVisible(false)
-      }, animateTimeout)
-    )
+    if (trigger === 'hover') {
+      clearTimeout(timeoutId)
+      setTimeoutId(
+        window.setTimeout(() => {
+          setVisible(false)
+        }, animateTimeout)
+      )
+    }
   }
 
   /**
@@ -335,6 +339,12 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
     select && select(getSelectedLanguageOption(code))
   }
 
+  const handleDropdownByClick = () => {
+    if (trigger === 'click') {
+      setVisible((value) => !value)
+    }
+  }
+
   if (!languages || !languages.length) {
     return null
   }
@@ -353,6 +363,7 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
             className={ns.be('dropdown', 'activator')}
             onMouseEnter={handleDropdownShow}
             onMouseLeave={handleDropdownHide}
+            onClick={handleDropdownByClick}
           >
             <div className={ns.b('language')}>
               <div className={ns.b('flag')}>
@@ -378,6 +389,7 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
             style={{ display: visible ? '' : 'none', ...dropdownStyles }}
             onMouseEnter={handleDropdownShow}
             onMouseLeave={handleDropdownHide}
+            onClick={handleDropdownByClick}
           >
             <ul>
               {languages.map((language) => {
