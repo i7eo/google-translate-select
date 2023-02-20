@@ -71,6 +71,7 @@ import {
   createStyleTag,
   getCookie,
   isString,
+  removeIcon,
   useMutationObserver,
 } from '@google-translate-select/utils'
 import {
@@ -246,6 +247,7 @@ export default Vue.extend<
               }
             }
           })
+          removeIcon()
         },
         {
           childList: true,

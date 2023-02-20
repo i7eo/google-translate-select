@@ -166,3 +166,13 @@ export function createScriptTag(
 }
 
 export type CreateScriptTagReturn = ReturnType<typeof createScriptTag>
+
+export function removeIcon() {
+  const iconDiv = document.getElementsByClassName(
+    'VIpgJd-ZVi9od-aZ2wEe-wOHMyf'
+  )[0]
+  if (iconDiv) {
+    // @ts-ignores
+    iconDiv.style.display = 'none'
+  }
+}

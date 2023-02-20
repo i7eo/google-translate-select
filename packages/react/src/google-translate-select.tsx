@@ -16,6 +16,7 @@ import {
   createStyleTag,
   getCookie,
   isString,
+  removeIcon,
   useMutationObserver,
 } from '@google-translate-select/utils'
 import '@google-translate-select/theme-chalk/src/index.scss'
@@ -135,6 +136,7 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
             }
           }
         })
+        removeIcon()
       },
       {
         attributes: true,

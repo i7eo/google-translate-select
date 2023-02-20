@@ -78,6 +78,7 @@ import {
   createStyleTag,
   getCookie,
   isString,
+  removeIcon,
   useMutationObserver,
 } from '@google-translate-select/utils'
 import {
@@ -240,6 +241,7 @@ export default defineComponent({
               }
             }
           })
+          removeIcon()
         },
         {
           attributes: true,
