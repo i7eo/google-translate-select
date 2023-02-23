@@ -8,6 +8,25 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 23-02-2023
+
+**@google-translate-select/vue3** `v0.1.1`
+
+- fix(react,utils,vue2,vue3): :bug: hide google default icon
+
+**@google-translate-select/vue2** `v0.1.1`
+
+- fix(react,utils,vue2,vue3): :bug: hide google default icon
+
+**@google-translate-select/utils** `v0.1.1`
+
+- fix(react,utils,vue2,vue3): :bug: hide google default icon
+
+**@google-translate-select/react** `v0.1.1`
+
+- fix(react,utils,vue2,vue3): :bug: hide google default icon
+
+
 ## 25-01-2023
 
 **@google-translate-select/react** `v0.0.5`
