@@ -1,5 +1,11 @@
 # @google-translate-select/utils
 
+## 0.1.1
+
+### Patch Changes
+
+- [#70](https://github.com/i7eo/google-translate-select/pull/70) [`407a623`](https://github.com/i7eo/google-translate-select/commit/407a62371cf6f6ff34e121a844c225f1fa3b4c20) Thanks [@i7eo](https://github.com/i7eo)! - fix(react,utils,vue2,vue3): :bug: hide google default icon
+
 ## 0.1.0
 
 ### Minor Changes
