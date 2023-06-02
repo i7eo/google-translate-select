@@ -441,8 +441,13 @@ export default defineComponent({
     })
 
     onBeforeUnmount(() => {
-      unref(googleTranslateOriginSelectObserve)!.stop!()
-      unref(htmlAttrLangObserve)!.stop!()
+      if (unref(googleTranslateOriginSelectObserve)?.stop) {
+        unref(googleTranslateOriginSelectObserve)!.stop!()
+      }
+
+      if (unref(htmlAttrLangObserve)?.stop) {
+        unref(htmlAttrLangObserve)!.stop!()
+      }
 
       if (props.trigger === 'click')
         document.removeEventListener('click', handleDropdownShowOrHideByClick)
