@@ -90,7 +90,10 @@ import {
 } from '@google-translate-select/constants'
 import '@google-translate-select/theme-chalk/src/index.scss'
 import { googleTranslateProps } from './types'
-import type { UseMutationObserverReturn } from '@google-translate-select/utils'
+import type {
+  CreateScriptTagReturn,
+  UseMutationObserverReturn,
+} from '@google-translate-select/utils'
 
 const ns = createNamespace('select')
 
@@ -106,6 +109,7 @@ export default defineComponent({
     const hoveredLanguageCode = ref<string>('')
     const setTimeoutId = ref<number>(-1)
     const jsonCallbackFnName = ref<string>('')
+    const scriptTag = ref<CreateScriptTagReturn | null>(null)
     const googleTranslateOriginSelectObserve =
       ref<Partial<UseMutationObserverReturn> | null>({})
     const htmlAttrLangObserve = ref<Partial<UseMutationObserverReturn> | null>(
@@ -178,7 +182,7 @@ export default defineComponent({
     function createGoogleTranslate() {
       createStyle()
       createJsonCallback()
-      createScript()
+      scriptTag.value = createScript()
     }
 
     /**
@@ -449,6 +453,9 @@ export default defineComponent({
         unref(htmlAttrLangObserve)!.stop!()
       }
 
+      if (unref(scriptTag)?.unload) {
+        unref(scriptTag)!.unload!()
+      }
       if (props.trigger === 'click')
         document.removeEventListener('click', handleDropdownShowOrHideByClick)
     })
