@@ -8,6 +8,17 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 20-06-2023
+
+**@google-translate-select/vue3** `v0.1.2`
+
+- Fix: Vue 2/3 lifecycle type errors and script tag cleanup
+
+**@google-translate-select/vue2** `v0.1.2`
+
+- Fix: Vue 2/3 lifecycle type errors and script tag cleanup
+
+
 ## 23-02-2023
 
 **@google-translate-select/vue3** `v0.1.1`
