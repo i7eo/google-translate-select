@@ -1,5 +1,11 @@
 # @google-translate-select/vue2
 
+## 0.1.2
+
+### Patch Changes
+
+- [#81](https://github.com/i7eo/google-translate-select/pull/81) [`1093599`](https://github.com/i7eo/google-translate-select/commit/1093599a2a6dc45a14fee1995ae52c16c56336f3) Thanks [@i7eo](https://github.com/i7eo)! - Fix: Vue 2/3 lifecycle type errors and script tag cleanup
+
 ## 0.1.1
 
 ### Patch Changes
