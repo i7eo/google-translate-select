@@ -118,6 +118,7 @@ export default Vue.extend<
       hoveredLanguageCode: '',
       setTimeoutId: -1,
       jsonCallbackFnName: '',
+      scriptTag: null,
       googleTranslateOriginSelectObserve: {},
       htmlAttrLangObserve: {},
       ns,
@@ -153,8 +154,17 @@ export default Vue.extend<
   },
   // @ts-ignore
   beforeUnmount() {
-    this.googleTranslateOriginSelectObserve!.stop!()
-    this.htmlAttrLangObserve!.stop!()
+    if (this.googleTranslateOriginSelectObserve?.stop) {
+      this.googleTranslateOriginSelectObserve!.stop!()
+    }
+
+    if (this.htmlAttrLangObserve?.stop) {
+      this.htmlAttrLangObserve!.stop!()
+    }
+
+    if (this.scriptTag?.unload) {
+      this.scriptTag.unload()
+    }
 
     // eslint-disable-next-line @typescript-eslint/no-this-alias
     const _this = this
@@ -220,7 +230,7 @@ export default Vue.extend<
     createGoogleTranslate() {
       this.createStyle()
       this.createJsonCallback()
-      this.createScript()
+      this.scriptTag = this.createScript()
     },
     /**
      * Triggers translations by observe changes in the DOM of GoogleTranslate's original select.
