@@ -1,5 +1,7 @@
 <h1>@google-translate-select</h1>
 
+> This project inherits from [v-google-translate](https://www.npmjs.com/package/v-google-translate). The previous `v-google-translate` package move to branch `backup/master`, if you want to check it, click [here](https://github.com/i7eo/google-translate-select/tree/backup/master).
+
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml)
 [![All Contributors](https://img.shields.io/github/all-contributors/i7eo/google-translate-select/master)](#contributors-)
 
@@ -27,9 +29,7 @@
 
 I rewrote this project using `pnpm + changeset + typescript + vite + tsup`, use monorepo to manage project. The package name is `@google-translate-select`.
 
-The previous `google-translate-select` package move to repo `backup/master`, if you want to check it, click [here](https://github.com/i7eo/google-translate-select/tree/backup/master).
-
-I refactor previous `google-translate-select` package using `typescript` and renamed it `@google-translate-select/vue2`, if you want to check it, click [here](https://github.com/i7eo/google-translate-select/tree/master/packages/vue2).
+I refactor previous `v-google-translate` package using `typescript` and renamed it `@google-translate-select/vue2`, if you want to check it, click [here](https://github.com/i7eo/google-translate-select/tree/master/packages/vue2).
 
 ## Origin
 
