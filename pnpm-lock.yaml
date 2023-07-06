@@ -288,7 +288,7 @@ importers:
       autoprefixer: ^10.4.13
       chalk: ^5.1.2
       clean-css: ^5.3.1
-      consola: ^2.15.3
+      consola: ^3.2.3
       esbuild: 0.15.13
       esbuild-plugin-copy: 2.0.1
       esbuild-sass-plugin: ^2.4.0
@@ -303,7 +303,7 @@ importers:
       autoprefixer: 10.4.13_postcss@8.4.20
       chalk: 5.2.0
       clean-css: 5.3.1
-      consola: 2.15.3
+      consola: 3.2.3
       esbuild: 0.15.13
       esbuild-plugin-copy: 2.0.1_esbuild@0.15.13
       esbuild-sass-plugin: 2.4.5
@@ -3616,8 +3616,9 @@ packages:
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
-  /consola/2.15.3:
-    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
+  /consola/3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
     dev: true
 
   /consolidate/0.15.1:
