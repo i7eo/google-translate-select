@@ -56,7 +56,7 @@
     "stylelint-order": "^5.0.0"
   },
   "devDependencies": {
-    "stylelint": "^14.14.1"
+    "stylelint": "^15.10.1"
   },
   "engines": {
     "node": ">=16"
