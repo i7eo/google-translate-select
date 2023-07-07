@@ -41,7 +41,7 @@
     "clean:deps": "rimraf node_modules"
   },
   "dependencies": {
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.2.3"
   },
   "engines": {
     "node": ">=16"
