@@ -29,6 +29,7 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
   'ko',
   'lt',
   'ms',
+  'vi',
   'no',
   'pl',
   'pt',
@@ -233,9 +234,15 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
   },
   {
     code: 'ms',
-    name: 'Malay',
+    name: 'Melayu',
     cname: '马来西亚语',
     ename: 'Malay',
+  },
+  {
+    code: 'vi',
+    name: 'Tiếng Việt',
+    cname: '越南语',
+    ename: 'Vietnamese',
   },
   {
     code: 'no',
