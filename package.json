@@ -78,7 +78,7 @@
     "@google-translate-select/simple-git-hooks-config": "workspace:*",
     "@google-translate-select/stylelint-config": "workspace:*",
     "@google-translate-select/ts-config": "workspace:*",
-    "@manypkg/get-packages": "1.1.3",
+    "@manypkg/get-packages": "2.2.0",
     "@types/inquirer": "9.0.3",
     "@types/jsdom": "20.0.1",
     "@types/node": "*",
