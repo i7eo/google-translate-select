@@ -259,7 +259,7 @@ importers:
       tsup: ^6.4.0
       typescript: ^4.8.4
       vite: ^4.0.1
-      vite-plugin-css-injected-by-js: 2.1.1
+      vite-plugin-css-injected-by-js: 3.2.0
       vite-plugin-dts: ^1.7.0
     dependencies:
       '@google-translate-select/constants': link:../constants
@@ -277,7 +277,7 @@ importers:
       tsup: 6.5.0_typescript@4.9.4
       typescript: 4.9.4
       vite: 4.0.4_terser@5.4.0
-      vite-plugin-css-injected-by-js: 2.1.1_vite@4.0.4
+      vite-plugin-css-injected-by-js: 3.2.0_vite@4.0.4
       vite-plugin-dts: 1.7.1_vite@4.0.4
 
   packages/theme-chalk:
@@ -332,7 +332,7 @@ importers:
       terser: 5.4.0
       typescript: ^4.8.4
       vite: ^4.0.1
-      vite-plugin-css-injected-by-js: 2.1.1
+      vite-plugin-css-injected-by-js: 3.2.0
       vite-plugin-dts: ^1.7.0
       vite-plugin-vue2: ^2.0.2
       vue: 2.6.11
@@ -347,7 +347,7 @@ importers:
       terser: 5.4.0
       typescript: 4.9.4
       vite: 4.0.4_sass@1.57.1+terser@5.4.0
-      vite-plugin-css-injected-by-js: 2.1.1_vite@4.0.4
+      vite-plugin-css-injected-by-js: 3.2.0_vite@4.0.4
       vite-plugin-dts: 1.7.1_vite@4.0.4
       vite-plugin-vue2: 2.0.3_rtqandavofgjt55ow4y42ygyku
       vue-template-compiler: 2.6.11_vue@2.6.11
@@ -363,7 +363,7 @@ importers:
       sass: ^1.56.1
       typescript: ^4.8.4
       vite: ^4.0.1
-      vite-plugin-css-injected-by-js: 2.1.1
+      vite-plugin-css-injected-by-js: 3.2.0
       vite-plugin-dts: ^1.7.0
       vue: ^3.2.41
     dependencies:
@@ -378,7 +378,7 @@ importers:
       sass: 1.57.1
       typescript: 4.9.4
       vite: 4.0.4_sass@1.57.1
-      vite-plugin-css-injected-by-js: 2.1.1_vite@4.0.4
+      vite-plugin-css-injected-by-js: 3.2.0_vite@4.0.4
       vite-plugin-dts: 1.7.1_vite@4.0.4
 
 packages:
@@ -8752,8 +8752,8 @@ packages:
       - terser
     dev: true
 
-  /vite-plugin-css-injected-by-js/2.1.1_vite@4.0.4:
-    resolution: {integrity: sha512-gjIG6iFWde32oRr/bK9CsfN+jdbura2y4GlDzeOiEm6py38ud8dXzFl9zwmHjOjZdr8XEgQ9TovzVGNzp47esw==}
+  /vite-plugin-css-injected-by-js/3.2.0_vite@4.0.4:
+    resolution: {integrity: sha512-a6MtYm/qfswVCtLezzzKJWL2ZpxrXXQd6/1UHy0t/G0IILHl4GG6n4OprbcC93aXIwkeS19JNbuKWD0Xt+pZtg==}
     peerDependencies:
       vite: '>2.0.0-0'
     dependencies:
