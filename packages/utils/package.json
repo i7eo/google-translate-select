@@ -58,8 +58,8 @@
     "@google-translate-select/constants": "workspace:*"
   },
   "devDependencies": {
-    "tsup": "^6.4.0",
-    "typescript": "^4.8.4"
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.5"
   },
   "engines": {
     "node": ">=16"

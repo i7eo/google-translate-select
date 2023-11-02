@@ -41,10 +41,10 @@
     "clean:deps": "rimraf node_modules"
   },
   "dependencies": {
-    "@commitlint/cli": "17.2.0",
-    "@commitlint/config-conventional": "17.2.0",
+    "@commitlint/cli": "17.6.6",
+    "@commitlint/config-conventional": "17.6.6",
     "@types/node": "*",
-    "czg": "^1.3.12"
+    "czg": "^1.6.1"
   },
   "engines": {
     "node": ">=16"

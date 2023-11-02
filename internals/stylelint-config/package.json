@@ -44,10 +44,10 @@
     "stylelint": "^14.13.0"
   },
   "dependencies": {
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.25",
     "postcss-html": "^1.5.0",
-    "postcss-scss": "4.0.5",
-    "stylelint-config-prettier": "^9.0.3",
+    "postcss-scss": "4.0.6",
+    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended": "^9.0.0",
     "stylelint-config-recommended-scss": "8.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
@@ -56,7 +56,7 @@
     "stylelint-order": "^5.0.0"
   },
   "devDependencies": {
-    "stylelint": "^14.14.1"
+    "stylelint": "^14.16.1"
   },
   "engines": {
     "node": ">=16"
