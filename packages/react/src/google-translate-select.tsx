@@ -319,11 +319,12 @@ export default function GoogleTranslateSelect(props: IGoogleTranslateProps) {
     const selectValue = isString(select) ? select : select.value ?? ''
     const googleTranslateOriginalSelectEl = document.querySelector(
       GOOGLE_TRANSLATE_ORIGINAL_SELECT_CLASSNAME
-    ) as HTMLSelectElement
+    ) as HTMLSelectElement | null
     const googleTranslateSelectEl = document.querySelector(`.${ns.b()}`)
 
     if (
       !googleTranslateSelectEl ||
+      !googleTranslateOriginalSelectEl ||
       googleTranslateSelectEl.innerHTML.length === 0 ||
       googleTranslateOriginalSelectEl.options.length === 0
     ) {
