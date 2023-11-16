@@ -1,5 +1,11 @@
 # @google-translate-select/react
 
+## 0.1.2
+
+### Patch Changes
+
+- [`6ad916e`](https://github.com/i7eo/google-translate-select/commit/6ad916e2ed9115e1c4ba36c16028635fcbdb114b) Thanks [@i7eo](https://github.com/i7eo)! - bump version for PR
+
 ## 0.1.1
 
 ### Patch Changes
