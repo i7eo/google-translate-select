@@ -8,6 +8,21 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 16-11-2023
+
+**@google-translate-select/react** `v0.1.2`
+
+- bump version for PR
+
+**@google-translate-select/vue3** `v0.1.3`
+
+- bump version for PR
+
+**@google-translate-select/vue2** `v0.1.3`
+
+- bump version for PR
+
+
 ## 20-06-2023
 
 **@google-translate-select/vue3** `v0.1.2`
