@@ -1,7 +1,7 @@
 {
   "name": "google-translate-select-monorepo",
   "private": true,
-  "packageManager": "pnpm@7.18.0",
+  "packageManager": "pnpm@8.11.0",
   "description": "🚀 A modern, high-performance monorepo project designed with Google Translate JS SDK. Vue and react are supported!",
   "keywords": [
     "google translate select",
@@ -97,6 +97,7 @@
     "vitest": "^0.26.2"
   },
   "engines": {
+    "pnpm": ">=8",
     "node": ">=16"
   },
   "pnpm": {

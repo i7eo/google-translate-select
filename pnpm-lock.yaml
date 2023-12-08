@@ -1,7 +1,7 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
   excludeLinksFromLockfile: false
 
 packageExtensionsChecksum: cf5845c61d8a4620d7dc9dead7ef46a1
@@ -118,7 +118,7 @@ importers:
     devDependencies:
       vitepress:
         specifier: 1.0.0-alpha.35
-        version: 1.0.0-alpha.35
+        version: 1.0.0-alpha.35(@types/node@18.11.18)
 
   apps/playground-react:
     dependencies:
@@ -149,7 +149,7 @@ importers:
         version: 4.9.4
       vite:
         specifier: ^4.0.1
-        version: 4.0.4(sass@1.57.1)
+        version: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
 
   apps/playground-vue2:
     dependencies:
@@ -171,7 +171,7 @@ importers:
         version: 4.9.4
       vite:
         specifier: ^3.0.0
-        version: 3.2.5(sass@1.57.1)(terser@5.4.0)
+        version: 3.2.5(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vite-plugin-vue2:
         specifier: ^2.0.2
         version: 2.0.3(vite@3.2.5)(vue-template-compiler@2.6.11)(vue@2.6.11)
@@ -196,7 +196,7 @@ importers:
         version: 4.9.4
       vite:
         specifier: ^4.0.1
-        version: 4.0.4
+        version: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
 
   internals/commitlint-config:
     dependencies:
@@ -320,7 +320,7 @@ importers:
     devDependencies:
       tsup:
         specifier: ^6.4.0
-        version: 6.5.0(typescript@4.9.4)
+        version: 6.5.0(postcss@8.4.20)(typescript@4.9.4)
       typescript:
         specifier: ^4.8.4
         version: 4.9.4
@@ -363,13 +363,13 @@ importers:
         version: 5.4.0
       tsup:
         specifier: ^6.4.0
-        version: 6.5.0(typescript@4.9.4)
+        version: 6.5.0(postcss@8.4.20)(typescript@4.9.4)
       typescript:
         specifier: ^4.8.4
         version: 4.9.4
       vite:
         specifier: ^4.0.1
-        version: 4.0.4(terser@5.4.0)
+        version: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vite-plugin-css-injected-by-js:
         specifier: 2.1.1
         version: 2.1.1(vite@4.0.4)
@@ -420,7 +420,7 @@ importers:
         version: 1.57.1
       tsup:
         specifier: ^6.4.0
-        version: 6.5.0(postcss@8.4.20)
+        version: 6.5.0(postcss@8.4.20)(typescript@4.9.4)
 
   packages/utils:
     dependencies:
@@ -430,7 +430,7 @@ importers:
     devDependencies:
       tsup:
         specifier: ^6.4.0
-        version: 6.5.0(typescript@4.9.4)
+        version: 6.5.0(postcss@8.4.20)(typescript@4.9.4)
       typescript:
         specifier: ^4.8.4
         version: 4.9.4
@@ -461,7 +461,7 @@ importers:
         version: 4.9.4
       vite:
         specifier: ^4.0.1
-        version: 4.0.4(sass@1.57.1)(terser@5.4.0)
+        version: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vite-plugin-css-injected-by-js:
         specifier: 2.1.1
         version: 2.1.1(vite@4.0.4)
@@ -507,7 +507,7 @@ importers:
         version: 4.9.4
       vite:
         specifier: ^4.0.1
-        version: 4.0.4(sass@1.57.1)
+        version: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vite-plugin-css-injected-by-js:
         specifier: 2.1.1
         version: 2.1.1(vite@4.0.4)
@@ -2806,7 +2806,7 @@ packages:
       regenerator-runtime: 0.13.11
       systemjs: 6.13.0
       terser: 5.4.0
-      vite: 4.0.4(terser@5.4.0)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
     dev: true
 
   /@vitejs/plugin-react@3.0.1(vite@4.0.4):
@@ -2820,7 +2820,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6(@babel/core@7.20.12)
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.0.4(sass@1.57.1)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2835,7 +2835,7 @@ packages:
       '@babel/core': 7.20.12
       '@babel/plugin-transform-typescript': 7.20.7(@babel/core@7.20.12)
       '@vue/babel-plugin-jsx': 1.1.1(@babel/core@7.20.12)
-      vite: 4.0.4(sass@1.57.1)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vue: 3.2.45
     transitivePeerDependencies:
       - supports-color
@@ -2848,7 +2848,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.0.4
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vue: 3.2.45
     dev: true
 
@@ -7308,22 +7308,6 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /postcss-load-config@3.1.4:
-    resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
-    engines: {node: '>= 10'}
-    peerDependencies:
-      postcss: '>=8.0.9'
-      ts-node: '>=9.0.0'
-    peerDependenciesMeta:
-      postcss:
-        optional: true
-      ts-node:
-        optional: true
-    dependencies:
-      lilconfig: 2.0.6
-      yaml: 1.10.2
-    dev: true
-
   /postcss-load-config@3.1.4(postcss@8.4.20):
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
@@ -8543,7 +8527,7 @@ packages:
   /tslib@2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
 
-  /tsup@6.5.0(postcss@8.4.20):
+  /tsup@6.5.0(postcss@8.4.20)(typescript@4.9.4):
     resolution: {integrity: sha512-36u82r7rYqRHFkD15R20Cd4ercPkbYmuvRkz3Q1LCm5BsiFNUgpo36zbjVhCOgvjyxNBWNKHsaD5Rl8SykfzNA==}
     engines: {node: '>=14'}
     hasBin: true
@@ -8569,41 +8553,6 @@ packages:
       joycon: 3.1.1
       postcss: 8.4.20
       postcss-load-config: 3.1.4(postcss@8.4.20)
-      resolve-from: 5.0.0
-      rollup: 3.9.1
-      source-map: 0.8.0-beta.0
-      sucrase: 3.29.0
-      tree-kill: 1.2.2
-    transitivePeerDependencies:
-      - supports-color
-      - ts-node
-    dev: true
-
-  /tsup@6.5.0(typescript@4.9.4):
-    resolution: {integrity: sha512-36u82r7rYqRHFkD15R20Cd4ercPkbYmuvRkz3Q1LCm5BsiFNUgpo36zbjVhCOgvjyxNBWNKHsaD5Rl8SykfzNA==}
-    engines: {node: '>=14'}
-    hasBin: true
-    peerDependencies:
-      '@swc/core': ^1
-      postcss: ^8.4.12
-      typescript: ^4.1.0
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      postcss:
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      bundle-require: 3.1.2(esbuild@0.15.18)
-      cac: 6.7.14
-      chokidar: 3.5.3
-      debug: 4.3.4
-      esbuild: 0.15.18
-      execa: 5.1.1
-      globby: 11.1.0
-      joycon: 3.1.1
-      postcss-load-config: 3.1.4
       resolve-from: 5.0.0
       rollup: 3.9.1
       source-map: 0.8.0-beta.0
@@ -8875,7 +8824,7 @@ packages:
       pathe: 0.2.0
       source-map: 0.6.1
       source-map-support: 0.5.21
-      vite: 4.0.4(@types/node@18.11.18)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8891,7 +8840,7 @@ packages:
     peerDependencies:
       vite: '>2.0.0-0'
     dependencies:
-      vite: 4.0.4(terser@5.4.0)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
     dev: true
 
   /vite-plugin-dts@1.7.1(vite@4.0.4):
@@ -8908,7 +8857,7 @@ packages:
       fs-extra: 10.1.0
       kolorist: 1.6.0
       ts-morph: 16.0.0
-      vite: 4.0.4(terser@5.4.0)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -8948,7 +8897,7 @@ packages:
       rollup: 2.79.1
       slash: 3.0.0
       source-map: 0.7.4
-      vite: 3.2.5(sass@1.57.1)(terser@5.4.0)
+      vite: 3.2.5(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vue-template-babel-compiler: 1.2.0(vue-template-compiler@2.6.11)
       vue-template-compiler: 2.6.11(vue@2.6.11)
     transitivePeerDependencies:
@@ -9043,7 +8992,7 @@ packages:
       rollup: 2.79.1
       slash: 3.0.0
       source-map: 0.7.4
-      vite: 4.0.4(sass@1.57.1)(terser@5.4.0)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vue-template-babel-compiler: 1.2.0(vue-template-compiler@2.6.11)
       vue-template-compiler: 2.6.11(vue@2.6.11)
     transitivePeerDependencies:
@@ -9104,7 +9053,7 @@ packages:
       - whiskers
     dev: true
 
-  /vite@3.2.5(sass@1.57.1)(terser@5.4.0):
+  /vite@3.2.5(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0):
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -9129,6 +9078,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.11.18
       esbuild: 0.15.18
       postcss: 8.4.20
       resolve: 1.22.1
@@ -9139,40 +9089,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite@4.0.4:
-    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.16.14
-      postcss: 8.4.20
-      resolve: 1.22.1
-      rollup: 3.9.1
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /vite@4.0.4(@types/node@18.11.18):
+  /vite@4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0):
     resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -9202,114 +9119,13 @@ packages:
       postcss: 8.4.20
       resolve: 1.22.1
       rollup: 3.9.1
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /vite@4.0.4(sass@1.57.1):
-    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.16.14
-      postcss: 8.4.20
-      resolve: 1.22.1
-      rollup: 3.9.1
-      sass: 1.57.1
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /vite@4.0.4(sass@1.57.1)(terser@5.4.0):
-    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.16.14
-      postcss: 8.4.20
-      resolve: 1.22.1
-      rollup: 3.9.1
       sass: 1.57.1
       terser: 5.4.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vite@4.0.4(terser@5.4.0):
-    resolution: {integrity: sha512-xevPU7M8FU0i/80DMR+YhgrzR5KS2ORy1B4xcX/cXLsvnUWvfHuqMmVU6N0YiJ4JWGRJJsLCgjEzKjG9/GKoSw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      esbuild: 0.16.14
-      postcss: 8.4.20
-      resolve: 1.22.1
-      rollup: 3.9.1
-      terser: 5.4.0
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /vitepress@1.0.0-alpha.35:
+  /vitepress@1.0.0-alpha.35(@types/node@18.11.18):
     resolution: {integrity: sha512-tJQjJstq+Ryb4pKtlxV4tD8KhxId+DTbR1FRrtJBhA+Vv4nexFHra5M9EgK9jUmoMc3rkyNaw7P3Kkix0ArP1w==}
     hasBin: true
     dependencies:
@@ -9320,7 +9136,7 @@ packages:
       '@vueuse/core': 9.10.0(vue@3.2.45)
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.12.1
-      vite: 4.0.4
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vue: 3.2.45
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -9373,7 +9189,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 4.0.4(@types/node@18.11.18)
+      vite: 4.0.4(@types/node@18.11.18)(sass@1.57.1)(terser@5.4.0)
       vite-node: 0.26.3(@types/node@18.11.18)
     transitivePeerDependencies:
       - less

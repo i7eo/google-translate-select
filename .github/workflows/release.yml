@@ -22,16 +22,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: pnpm
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
 
       - name: Install Dependencies
         run: pnpm install --no-frozen-lockfile
@@ -39,11 +39,10 @@ jobs:
       - name: Build Packages
         run: pnpm build
 
-      - name: Fetch Github User Email
-        run: git config --global user.email $(git log -n 1 --pretty=format:%ae)
-
-      - name: Fetch Github User Name
-        run: git config --global user.name $(git log -n 1 --pretty=format:%an)
+      - name: Fetch Github User Email & Name
+        run: | 
+          git config --global user.email $(git log -n 1 --pretty=format:%ae)
+          git config --global user.name $(git log -n 1 --pretty=format:%an)
 
       - name: Generate changelogrc
         run: pnpm changelog:gen
