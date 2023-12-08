@@ -35,6 +35,12 @@ trigger="click"
 ::: code-group
 
 ```vue{2-8,14-16} [vue2]
+
+npm install @google-translate-select/vue2
+
+import GoogleTranslateSelect from '@google-translate-select/vue2';
+
+
 <template>
   <GoogleTranslateSelect
     default-language-code="en"
@@ -57,6 +63,11 @@ export default Vue.extend({
 ```
 
 ```vue{2-8,11-13} [vue3]
+
+npm install @google-translate-select/vue3
+
+import GoogleTranslateSelect from '@google-translate-select/vue3';
+
 <template>
   <GoogleTranslateSelect
     default-language-code="en"
@@ -74,6 +85,10 @@ const handleGoogleTranslateSelect = (language: any) => {
 ```
 
 ```tsx{2-5,7-13} [react]
+npm install @google-translate-select/vue3
+
+import GoogleTranslateSelect from '@google-translate-select/vue3';
+
 function App() {
   const handleGoogleTranslateSelect = (language: any) => {
     console.log('select', language)
