@@ -42,7 +42,25 @@ For more details on what localization is and the potential benefits, [checkout t
 
 ## Usage
 
-see: https://github.com/i7eo/google-translate-select/tree/backup/master?tab=readme-ov-file
+### Support Languages
+
+see `GOOGLE_TRANSLATE_SELECT_LANGUAGES` in https://github.com/i7eo/google-translate-select/blob/master/packages/constants/src/web/languages.ts
+
+### Props
+
+`vue` props see: https://github.com/i7eo/google-translate-select/blob/master/packages/vue3/src/types/props.ts
+
+`react` props see: https://github.com/i7eo/google-translate-select/blob/master/packages/react/src/types/props.ts
+
+### Tips
+
+- Note that here we invoke `translate.google.com/translate_a/element.js` library file, the translation for the web pages of writing is the full amount. Only the translation of static content is supported without refreshing the page.
+
+- **For something you don't want to translate, add `class= "notranslate"`**
+
+- I can give you an example of best practices: We are working on a cross-border e-commerce project. In this project, we need two functions, multi-language and multi-currency, to complete internationalization. For the price on the page, we don't want to be translated into multiple languages. So we added `class= "notranslate"` to the price DOM to dynamically modify the price DOM information when the currency changes.
+
+- **Google Translate JS SDK default your page source language is English (code is `en`), if your page source language is non-English language, please set `defaultPageLanguageCode` manually. For example: `defaultPageLanguageCode = "zh-CN"`**
 
 ## Inspire
 
@@ -111,3 +129,5 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+ 
