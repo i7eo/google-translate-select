@@ -15,6 +15,7 @@
 
 - [Refatcor](#refactor)
 - [Origin](#origin)
+- [Usage](#usage)
 - [Inspire](#inspire)
 - [Development](#development)
   - [Vitepress for @google-translate-select](#vitepress-for-google-translate-select)
@@ -38,6 +39,10 @@ This package enables localization of web apps made with vue by use of google tra
 If your target market lives across the sea and speaks a different language, you may not have any choice but to localize.
 
 For more details on what localization is and the potential benefits, [checkout this article](https://alistapart.com/article/do-you-need-to-localize-your-website/).
+
+## Usage
+
+see: https://github.com/i7eo/google-translate-select/tree/backup/master?tab=readme-ov-file
 
 ## Inspire
 
