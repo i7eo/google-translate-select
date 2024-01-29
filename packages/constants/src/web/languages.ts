@@ -11,6 +11,7 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
   'ca',
   'zh-CN',
   'zh-TW',
+  'he',
   'hr',
   'cs',
   'da',
@@ -81,6 +82,12 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
     name: 'العربية',
     cname: '阿拉伯语',
     ename: 'Arabic',
+  },
+  {
+    code: 'he',
+    name: 'עִברִית',
+    cname: '希伯来语',
+    ename: 'Hebrew',
   },
   {
     code: 'hy',
