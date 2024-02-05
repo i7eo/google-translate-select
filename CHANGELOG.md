@@ -8,6 +8,33 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 05-02-2024
+
+**@google-translate-select/vue3** `v0.1.4`
+
+- add hebrew language, see pr#91
+
+**@google-translate-select/vue2** `v0.1.4`
+
+- add hebrew language, see pr#91
+
+**@google-translate-select/utils** `v0.1.2`
+
+- add hebrew language, see pr#91
+
+**@google-translate-select/theme-chalk** `v0.1.1`
+
+- add hebrew language, see pr#91
+
+**@google-translate-select/react** `v0.1.3`
+
+- add hebrew language, see pr#91
+
+**@google-translate-select/constants** `v0.1.1`
+
+- add hebrew language, see pr#91
+
+
 ## 16-11-2023
 
 **@google-translate-select/react** `v0.1.2`
