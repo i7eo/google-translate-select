@@ -1,5 +1,11 @@
 # @google-translate-select/constants
 
+## 0.1.1
+
+### Patch Changes
+
+- [`a03bc78`](https://github.com/i7eo/google-translate-select/commit/a03bc788cdb424cd7b0a2b5a009af9d1b1844c5b) Thanks [@i7eo](https://github.com/i7eo)! - add hebrew language, see pr#91
+
 ## 0.1.0
 
 ### Minor Changes
