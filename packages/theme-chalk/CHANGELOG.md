@@ -1,5 +1,11 @@
 # @google-translate-select/theme-chalk
 
+## 0.1.2
+
+### Patch Changes
+
+- [#92](https://github.com/i7eo/google-translate-select/pull/92) [`523fa9e`](https://github.com/i7eo/google-translate-select/commit/523fa9ec51d465d618153bfec476ee25ab245d56) Thanks [@gavbrown89](https://github.com/gavbrown89)! - Add Hindi to languages
+
 ## 0.1.1
 
 ### Patch Changes

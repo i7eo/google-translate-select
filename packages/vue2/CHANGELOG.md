@@ -1,5 +1,14 @@
 # @google-translate-select/vue2
 
+## 0.1.5
+
+### Patch Changes
+
+- Updated dependencies [[`523fa9e`](https://github.com/i7eo/google-translate-select/commit/523fa9ec51d465d618153bfec476ee25ab245d56)]:
+  - @google-translate-select/constants@0.1.2
+  - @google-translate-select/theme-chalk@0.1.2
+  - @google-translate-select/utils@0.1.3
+
 ## 0.1.4
 
 ### Patch Changes
