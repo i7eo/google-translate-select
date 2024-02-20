@@ -23,6 +23,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "syamsoul",
+      "name": "Syamsoul Azrien Muda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15118790?v=4",
+      "profile": "https://info.souldoit.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -30,5 +39,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "google-translate-select",
-  "projectOwner": "i7eo"
+  "projectOwner": "i7eo",
+  "commitType": "docs"
 }
