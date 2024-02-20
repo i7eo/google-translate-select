@@ -23,6 +23,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ubercj",
+      "name": "Chris Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73803823?v=4",
+      "profile": "https://github.com/ubercj",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -30,5 +39,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "google-translate-select",
-  "projectOwner": "i7eo"
+  "projectOwner": "i7eo",
+  "commitType": "docs"
 }
