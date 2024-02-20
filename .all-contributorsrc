@@ -23,6 +23,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "zero-stealth",
+      "name": "Zero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86556838?v=4",
+      "profile": "https://collins-odongo.netlify.app/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -30,5 +39,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "google-translate-select",
-  "projectOwner": "i7eo"
+  "projectOwner": "i7eo",
+  "commitType": "docs"
 }
