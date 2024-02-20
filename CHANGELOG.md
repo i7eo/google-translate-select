@@ -8,6 +8,17 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 20-02-2024
+
+**@google-translate-select/theme-chalk** `v0.1.2`
+
+- Add Hindi to languages
+
+**@google-translate-select/constants** `v0.1.2`
+
+- Add Hindi to languages
+
+
 ## 05-02-2024
 
 **@google-translate-select/vue3** `v0.1.4`
