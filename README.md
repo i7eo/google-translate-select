@@ -115,6 +115,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MiracleH"><img src="https://avatars.githubusercontent.com/u/22657524?v=4?s=100" width="100px;" alt="hyj"/><br /><sub><b>hyj</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=MiracleH" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://yesux.github.io/"><img src="https://avatars.githubusercontent.com/u/44074974?v=4?s=100" width="100px;" alt="suxiong"/><br /><sub><b>suxiong</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=YeSuX" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ubercj"><img src="https://avatars.githubusercontent.com/u/73803823?v=4?s=100" width="100px;" alt="Chris Jones"/><br /><sub><b>Chris Jones</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=ubercj" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://info.souldoit.com"><img src="https://avatars.githubusercontent.com/u/15118790?v=4?s=100" width="100px;" alt="Syamsoul Azrien Muda"/><br /><sub><b>Syamsoul Azrien Muda</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=syamsoul" title="Code">💻</a></td>
     </tr>
   </tbody>
