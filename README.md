@@ -113,8 +113,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/MiracleH"><img src="https://avatars.githubusercontent.com/u/22657524?v=4?s=100" width="100px;" alt="hyj"/><br /><sub><b>hyj</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=MiracleH" title="Code">💻</a></td>
-      <td align="center"><a href="https://yesux.github.io/"><img src="https://avatars.githubusercontent.com/u/44074974?v=4?s=100" width="100px;" alt="suxiong"/><br /><sub><b>suxiong</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=YeSuX" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MiracleH"><img src="https://avatars.githubusercontent.com/u/22657524?v=4?s=100" width="100px;" alt="hyj"/><br /><sub><b>hyj</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=MiracleH" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://yesux.github.io/"><img src="https://avatars.githubusercontent.com/u/44074974?v=4?s=100" width="100px;" alt="suxiong"/><br /><sub><b>suxiong</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=YeSuX" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://collins-odongo.netlify.app/"><img src="https://avatars.githubusercontent.com/u/86556838?v=4?s=100" width="100px;" alt="Zero"/><br /><sub><b>Zero</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=zero-stealth" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
