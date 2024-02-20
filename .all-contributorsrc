@@ -25,12 +25,39 @@
       ]
     },
     {
+      "login": "ubercj",
+      "name": "Chris Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73803823?v=4",
+      "profile": "https://github.com/ubercj",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "syamsoul",
+      "name": "Syamsoul Azrien Muda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15118790?v=4",
+      "profile": "https://info.souldoit.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "huazhuangnan",
+      "name": "HuaZhuangNan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46070704?v=4",
+      "profile": "https://github.com/huazhuangnan",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "zero-stealth",
       "name": "Zero",
       "avatar_url": "https://avatars.githubusercontent.com/u/86556838?v=4",
       "profile": "https://collins-odongo.netlify.app/",
       "contributions": [
-        "doc"
+        "code"
       ]
     }
   ],
