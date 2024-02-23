@@ -2,7 +2,8 @@
 
 > This project inherits from [v-google-translate](https://www.npmjs.com/package/v-google-translate). The previous `v-google-translate` package move to branch `backup/master`, if you want to check it, click [here](https://github.com/i7eo/google-translate-select/tree/backup/master).
 
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml)
+<!-- [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml/badge.svg) -->
+![GitHub Workflow Status (branch)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml/badge.svg)
 [![All Contributors](https://img.shields.io/github/all-contributors/i7eo/google-translate-select/master)](#contributors-)
 
 [@google-translate-select](https://google-translate-select.i7eo.com) is an open-source project to invoke google translate jssdk to translate your dispaly content, we support vue2/vue3/react as follows:
