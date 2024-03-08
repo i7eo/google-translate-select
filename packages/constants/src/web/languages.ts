@@ -24,6 +24,7 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
   'el',
   'hu',
   'hi',
+  'gu',
   'id',
   'ga',
   'it',
@@ -95,6 +96,12 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
     name: 'हिंदी',
     cname: '印地语',
     ename: 'Hindi',
+  },
+  {
+    code: 'gu',
+    name: '古吉拉特语',
+    cname: '古吉拉特语',
+    ename: 'Gujarati',
   },
   {
     code: 'hy',
