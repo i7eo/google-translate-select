@@ -8,6 +8,17 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 08-03-2024
+
+**@google-translate-select/theme-chalk** `v0.1.3`
+
+- Add gujarati to languages
+
+**@google-translate-select/constants** `v0.1.3`
+
+- Add gujarati to languages
+
+
 ## 20-02-2024
 
 **@google-translate-select/theme-chalk** `v0.1.2`
