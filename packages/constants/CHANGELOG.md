@@ -1,5 +1,11 @@
 # @google-translate-select/constants
 
+## 0.1.3
+
+### Patch Changes
+
+- [#97](https://github.com/i7eo/google-translate-select/pull/97) [`c55c4fd`](https://github.com/i7eo/google-translate-select/commit/c55c4fd3b724b5db97d77660ef9497b196eff171) Thanks [@gavbrown89](https://github.com/gavbrown89)! - Add gujarati to languages
+
 ## 0.1.2
 
 ### Patch Changes

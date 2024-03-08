@@ -1,5 +1,14 @@
 # @google-translate-select/vue3
 
+## 0.1.6
+
+### Patch Changes
+
+- Updated dependencies [[`c55c4fd`](https://github.com/i7eo/google-translate-select/commit/c55c4fd3b724b5db97d77660ef9497b196eff171)]:
+  - @google-translate-select/constants@0.1.3
+  - @google-translate-select/theme-chalk@0.1.3
+  - @google-translate-select/utils@0.1.4
+
 ## 0.1.5
 
 ### Patch Changes
