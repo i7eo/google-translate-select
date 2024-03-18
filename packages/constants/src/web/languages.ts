@@ -43,6 +43,7 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
   'th',
   'tr',
   'uk',
+  'bn'
 ] as const
 
 export type LanguageCode =
@@ -325,4 +326,10 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
     cname: '乌克兰语',
     ename: 'Ukrainian',
   },
+  {
+    code: 'bn',
+    name: 'বাংলা',
+    cname: '孟加拉语',
+    ename: 'Bengali',
+  }
 ]
