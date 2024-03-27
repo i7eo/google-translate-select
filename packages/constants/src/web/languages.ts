@@ -141,13 +141,13 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
   },
   {
     code: 'zh-CN',
-    name: 'Chinese (Simplified)',
+    name: '中文 (简体)',
     cname: '中文 (简体)',
     ename: 'Chinese (Simplified)',
   },
   {
     code: 'zh-TW',
-    name: 'Chinese (Traditional)',
+    name: '中文 (繁体)',
     cname: '中文 (繁体)',
     ename: 'Chinese (Traditional)',
   },
