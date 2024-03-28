@@ -8,6 +8,13 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 28-03-2024
+
+**@google-translate-select/constants** `v0.1.4`
+
+- feat: Replace "Chinese (Simplified)" with "中文 (简体)","Chinese (Traditional)" with "中文 (繁体)"
+
+
 ## 08-03-2024
 
 **@google-translate-select/theme-chalk** `v0.1.3`
