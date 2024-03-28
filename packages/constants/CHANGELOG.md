@@ -1,5 +1,11 @@
 # @google-translate-select/constants
 
+## 0.1.4
+
+### Patch Changes
+
+- [#101](https://github.com/i7eo/google-translate-select/pull/101) [`ba3f5ed`](https://github.com/i7eo/google-translate-select/commit/ba3f5ed9a9504f6d9dc1d54782a41973795a5019) Thanks [@daweilv](https://github.com/daweilv)! - feat: Replace "Chinese (Simplified)" with "中文 (简体)","Chinese (Traditional)" with "中文 (繁体)"
+
 ## 0.1.3
 
 ### Patch Changes
