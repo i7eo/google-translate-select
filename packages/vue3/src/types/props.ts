@@ -2,11 +2,21 @@ import { GOOGLE_TRANSLATE_SELECT_LANGUAGES } from '@google-translate-select/cons
 import type { Language as ILanguage } from '@google-translate-select/constants'
 import type { CSSProperties, ExtractPropTypes, PropType } from 'vue'
 
+const languages = ref<ILanguage[]>([
+    ...GOOGLE_TRANSLATE_SELECT_LANGUAGES,
+   {
+        code: 'cy',
+        name: 'Cymraeg',
+        cname: '威尔士语',
+        ename: 'Welsh',
+   }
+])
+
 export const googleTranslateProps = {
   /** select dropdown option */
   languages: {
     type: Array as PropType<ILanguage[]>,
-    default: () => GOOGLE_TRANSLATE_SELECT_LANGUAGES,
+    default: () => languages,
   },
   /** select input default language*/
   defaultLanguageCode: {
