@@ -1,5 +1,6 @@
 export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
   'en',
+  'cy',
   'af',
   'sq',
   'ar',
@@ -66,6 +67,12 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
     name: 'English',
     cname: '英语',
     ename: 'English',
+  },
+  {
+    code: 'cy',
+    name: 'Cymraeg',
+    cname: '威尔士语',
+    ename: 'Welsh',
   },
   {
     code: 'af',
