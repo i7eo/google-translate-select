@@ -8,6 +8,17 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 29-04-2024
+
+**@google-translate-select/theme-chalk** `v0.1.4`
+
+- Update props.ts
+
+**@google-translate-select/constants** `v0.1.5`
+
+- Update props.ts
+
+
 ## 28-03-2024
 
 **@google-translate-select/constants** `v0.1.4`
