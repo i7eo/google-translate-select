@@ -1,5 +1,11 @@
 # @google-translate-select/constants
 
+## 0.1.5
+
+### Patch Changes
+
+- [#104](https://github.com/i7eo/google-translate-select/pull/104) [`59c68bc`](https://github.com/i7eo/google-translate-select/commit/59c68bc5be61a3e46514f3ccb9fdda42ea55f8d5) Thanks [@adamvindico](https://github.com/adamvindico)! - Update props.ts
+
 ## 0.1.4
 
 ### Patch Changes
