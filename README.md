@@ -3,6 +3,7 @@
 > This project inherits from [v-google-translate](https://www.npmjs.com/package/v-google-translate). The previous `v-google-translate` package move to branch `backup/master`, if you want to check it, click [here](https://github.com/i7eo/google-translate-select/tree/backup/master).
 
 <!-- [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/i7eo/google-translate-select/Release/master?label=build%20%26%20release)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml/badge.svg) -->
+
 ![GitHub Workflow Status (branch)](https://github.com/i7eo/google-translate-select/actions/workflows/release.yml/badge.svg)
 [![All Contributors](https://img.shields.io/github/all-contributors/i7eo/google-translate-select/master)](#contributors-)
 
@@ -108,12 +109,14 @@ This repository is published under the [MIT](LICENSE) license.
 ## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tbody>
     <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rochac2lee"><img src="https://avatars.githubusercontent.com/u/60928171?v=4?s=100" width="100px;" alt="rochac2lee"/><br /><sub><b>rochac2lee</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=rochac2lee" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MiracleH"><img src="https://avatars.githubusercontent.com/u/22657524?v=4?s=100" width="100px;" alt="hyj"/><br /><sub><b>hyj</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=MiracleH" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://yesux.github.io/"><img src="https://avatars.githubusercontent.com/u/44074974?v=4?s=100" width="100px;" alt="suxiong"/><br /><sub><b>suxiong</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=YeSuX" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ubercj"><img src="https://avatars.githubusercontent.com/u/73803823?v=4?s=100" width="100px;" alt="Chris Jones"/><br /><sub><b>Chris Jones</b></sub></a><br /><a href="https://github.com/i7eo/google-translate-select/commits?author=ubercj" title="Code">💻</a></td>
@@ -137,5 +140,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
- 
