@@ -43,6 +43,7 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
   'es',
   'sv',
   'th',
+  'my',
   'tr',
   'uk',
 ] as const
@@ -326,6 +327,12 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
     name: 'ภาษาไทย',
     cname: '泰语',
     ename: 'Thai',
+  },
+  {
+    code: 'my',
+    name: 'မြန်မာဘာသာ',
+    cname: '緬甸',
+    ename: 'Myanmar',
   },
   {
     code: 'tr',
