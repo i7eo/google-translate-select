@@ -8,6 +8,17 @@ The Changelog gives an overview of the changes we've made to @google-translate-s
 
 <!-- CHANGELOG:INSERT -->
 
+## 20-01-2025
+
+**@google-translate-select/theme-chalk** `v1.0.0`
+
+- Add Portuguese (Brazil)
+
+**@google-translate-select/constants** `v1.0.0`
+
+- Add Portuguese (Brazil)
+
+
 ## 29-04-2024
 
 **@google-translate-select/theme-chalk** `v0.1.4`
