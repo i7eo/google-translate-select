@@ -36,6 +36,7 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES_CODES = [
   'vi',
   'no',
   'pl',
+  'pt-PT',
   'pt',
   'ro',
   'ru',
@@ -285,10 +286,16 @@ export const GOOGLE_TRANSLATE_SELECT_LANGUAGES: Language[] = [
     ename: 'Polish',
   },
   {
+    code: 'pt-PT',
+    name: 'Português (Portugal)',
+    cname: '葡萄牙语 (葡萄牙)',
+    ename: 'Portuguese (Portugal)',
+  },
+  {
     code: 'pt',
-    name: 'Português',
-    cname: '葡萄牙语',
-    ename: 'Portuguese',
+    name: 'Português (Brasil)',
+    cname: '葡萄牙语 (巴西)',
+    ename: 'Portuguese (Brazil)',
   },
   {
     code: 'ro',
