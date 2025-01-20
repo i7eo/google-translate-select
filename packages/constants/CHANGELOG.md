@@ -1,5 +1,11 @@
 # @google-translate-select/constants
 
+## 1.0.0
+
+### Major Changes
+
+- [#112](https://github.com/i7eo/google-translate-select/pull/112) [`9374255`](https://github.com/i7eo/google-translate-select/commit/9374255e60a1b36c535f5b35b4f400dc88195b3f) Thanks [@rochac2lee](https://github.com/rochac2lee)! - Add Portuguese (Brazil)
+
 ## 0.1.5
 
 ### Patch Changes
